@@ -546,8 +546,13 @@ textarea {
     margin-bottom: 50px;
 }
 
+.project-card:last-of-type {
+    margin-bottom: 0px;
+}
+
 .project-card-img-container {
     align-self: center;
+    justify-self: center;
 }
 
 
@@ -782,3 +787,170 @@ padding: 0 5px 0 5px;
     color: #525252;
     text-decoration: none;
 }
+
+
+/* media queries start */
+
+    
+@media screen and (max-width: 1300px) {
+
+
+
+.project-card-img {
+    width: 450px;
+}
+
+.work-experience {
+    margin-right: 50px;
+}
+
+
+}
+
+@media screen and (max-width: 1000px) {
+
+
+.work-experience-image {
+    width: 400px;
+}
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+
+    .header-list {
+        display: flex;
+        margin: 19px auto 0;
+        justify-content: space-evenly;
+    }
+
+    .header-title-wrapper {
+        margin: 40px 66px 20px 96px;
+        text-align: center;
+    }
+
+    .header-img {
+        width: 380px;
+        
+    }
+
+    .header-img-container {
+        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    .header-presentation-wrapper {
+        flex-direction: column;
+    }
+
+    .header-subtitle {
+        margin-top: 15px;
+    }
+
+    .header-nav {
+        display: block;
+    }
+
+    
+    .section-title {
+        margin-bottom: 40px;
+        margin-top: 45px;
+    }
+
+    .project-card {
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+
+    .project-card-description-technology {
+        margin: auto auto 0;
+    }
+
+    .project-card {
+        grid-template-columns: repeat(1, 450px);
+        justify-content: center;
+    }
+
+    .project-card-title {
+        padding: 10px;
+    }
+
+    .project-card-description {
+        padding-bottom: 10px;
+        text-align: justify;
+    }
+
+.project-card-links {
+    padding-bottom: 10px;
+}
+
+.about-me {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.about-me-image:nth-of-type(1) {
+    justify-self: center;
+    margin-right: 0;
+}
+
+.about-me-image {
+    width: 400px;
+}
+
+.about-me-image:nth-of-type(2) {
+    margin-left: 0;
+    justify-self: center;
+}
+
+.video-description {
+    margin-bottom: 30px;
+}
+
+.section-title {
+   margin-top: 30px;
+}
+
+.work-experience {
+        max-width: 500px;
+        margin: 0 auto;
+}
+
+.work-experience-decription-beforeIT {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    margin-bottom: 15px;
+}
+
+
+.work-experience-description-container {
+ display: block;
+}
+
+.work-experience-image-container {
+        display: flex;
+        justify-content: center;
+}
+
+.contacts {
+    max-width: 400px;
+}
+
+.who-made {
+    display: none;
+}
+
+.footer-information {
+    justify-content: center;
+    padding: 0;
+}
+
+
+}
+    
+
+
+
+/* media queries end */
