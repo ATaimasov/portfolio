@@ -792,6 +792,13 @@ padding: 0 5px 0 5px;
 /* media queries start */
 
     
+@media screen and (max-width: 1600px) {
+.header-title-wrapper {
+    margin: 128px 66px 70px 96px;
+}
+
+}
+
 @media screen and (max-width: 1300px) {
 
 
@@ -803,9 +810,21 @@ padding: 0 5px 0 5px;
 .work-experience {
     margin-right: 50px;
 }
-
-
 }
+
+
+@media screen and (max-width: 1105px) {
+
+    .header-img-container {
+        padding-right: 80px;
+    }
+
+    .header-title-wrapper {
+        margin: 125px 44px 21px 33px;
+    }
+   
+    }
+    
 
 @media screen and (max-width: 1000px) {
 
@@ -813,8 +832,74 @@ padding: 0 5px 0 5px;
 .work-experience-image {
     width: 400px;
 }
+
+
+.header-presentation-wrapper {
+    flex-wrap: wrap;
 }
 
+
+.header-title {
+    text-align: center;
+}
+
+.header-subtitle {
+    margin-top: 15px;
+}
+
+.header-title-wrapper {
+    margin: 36px 15px 21px 30px;
+}
+
+.header-nav {
+   display: block;
+}
+
+.header-list {
+    justify-content: space-evenly;
+}
+
+.header-presentation-wrapper {
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 800px;
+}
+
+.work-experience-decription-afterIT {
+    margin-bottom: 30px;
+}
+
+.footer-information {
+    padding: 13px 96px 0 96px;
+}
+
+.who-made {
+    display: none;
+}
+
+.footer-information {
+    justify-content: center;
+    padding: 0;
+}
+
+}
+
+
+@media screen and (max-width: 910px) {
+
+    .project-card-img {
+        width: 400px;
+    }
+   
+    .about-me {
+        max-width: 740px;
+    }
+
+
+    }
+    
 
 
 @media screen and (max-width: 768px) {
@@ -828,7 +913,6 @@ padding: 0 5px 0 5px;
     }
 
     .header-title-wrapper {
-        margin: 40px 66px 20px 96px;
         text-align: center;
     }
 
@@ -883,6 +967,10 @@ padding: 0 5px 0 5px;
         text-align: justify;
     }
 
+    .header-item {
+        margin: 0
+    }
+
 .project-card-links {
     padding-bottom: 10px;
 }
@@ -929,27 +1017,108 @@ padding: 0 5px 0 5px;
  display: block;
 }
 
-.work-experience-image-container {
-        display: flex;
-        justify-content: center;
-}
 
 .contacts {
     max-width: 400px;
 }
 
-.who-made {
-    display: none;
-}
-
-.footer-information {
-    justify-content: center;
-    padding: 0;
-}
 
 
 }
+ 
+@media screen and (max-width: 500px) {
+    .about-me {
+        max-width: 400px;
+    }
+
+    .work-experience {
+        max-width: 400px;
+    }
+
+    .project-card-img {
+        width: 350px;
+    }
+}
+
+
+
+ 
+@media screen and (max-width: 430px) {
+    .header-item {
+        margin: 0px 0px;
+    }
+
+    .header-title-wrapper {
+        margin: 15px 10px 9px 10px;
+    }
+
+    .header-title {
+        font-size: 55px;
+    }
+
+    .header-list {
+        margin: 10px auto 0;
+    }
+
+    .header-img {
+        width: 350px;
+    }
+
+    .project-card {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .stack {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .work-experience {
+        max-width: 300px;
+    }
+
+    .work-experience-image {
+        width: 330px;
+    }
+
+    .contacts {
+        max-width: 300px;
+    }
+
+    .stack {
+        font-size: 10px;
+    }
+
+    .project-card {
+        grid-template-columns: repeat(1, 350px);
+    }
+
+    .about-me-image {
+        width: 335px;
+    }
+
+    .about-me {
+        max-width: 340px;
+    }
+
+    .work-experience-image {
+        width: 300px;
+    }
+
+}
+
+
+@media screen and (max-width: 350px)  {
+    .header-link {
+        font-size: 15px;
+    }
     
+    .stack {
+        font-size: 9px;
+    }
+}
+
 
 
 
