@@ -1038,6 +1038,7 @@ padding: 0 5px 0 5px;
     .project-card-img {
         width: 350px;
     }
+
 }
 
 
@@ -1070,6 +1071,10 @@ padding: 0 5px 0 5px;
 
     .stack {
         font-size: 12px;
+    }
+
+    .header-link {
+        font-size: 16px;
     }
 }
 
@@ -1113,7 +1118,7 @@ padding: 0 5px 0 5px;
     .header-link {
         font-size: 15px;
     }
-    
+
     .stack {
         font-size: 9px;
     }
