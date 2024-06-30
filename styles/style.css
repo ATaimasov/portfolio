@@ -521,6 +521,7 @@ textarea {
 
 .header-img {
     width: 400px;
+    clip-path: circle(50%);
 }
  /* header styles end  */
 
@@ -788,6 +789,28 @@ padding: 0 5px 0 5px;
     text-decoration: none;
 }
 
+
+/* font-awesome styles start */
+
+
+    .fa-arrow-up-right-from-square {
+       
+    }
+
+    .fa-brands.fa-github:hover {
+       
+    }
+
+    .fa-brands.fa-youtube {
+        color: #c4302b;
+        vertical-align: middle;
+    }
+
+    .fa-solid.fa-envelope {
+        vertical-align: middle;
+    }
+
+/*  font-awesome styles end */
 
 /* media queries start */
 
