@@ -17,153 +17,141 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="wrapper">
+    <header class="header wrapper">
                 <nav class="header-nav">
-                    <ul class="header-list">
-                        <li class="header-item animation-link"><a href="#projects" class="header-link">Проекты <i class="fa-solid fa-list"></i></a></li>
-                        <li class="header-item animation-link"><a href="#about-me" class="header-link">Обо мне <i class="fa-solid fa-user"></i></a></li>
-                        <li class="header-item animation-link"><a href="#work-experience" class="header-link">Опыт работы <i class="fa-solid fa-briefcase"></i></a></li>
-                        <li class="header-item animation-link"><a href="#contacts" class="header-link">Контакты <i class="fa-solid fa-comments"></i></a></li>
+                    <ul class="header__list">
+                        <li class="header__item link--active"><a href="#projects" class="header__link">Проекты <i class="fa-solid fa-list"></i></a></li>
+                        <li class="header__item link--active"><a href="#about-me" class="header__link">Обо мне <i class="fa-solid fa-user"></i></a></li>
+                        <li class="header__item link--active"><a href="#work-experience" class="header__link">Опыт работы <i class="fa-solid fa-briefcase"></i></a></li>
+                        <li class="header__item link--active"><a href="#contacts" class="header__link">Контакты <i class="fa-solid fa-comments"></i></a></li>
                     </ul>
                 </nav>
-
-                <div class="header-presentation-wrapper">
-                    <div class="header-title-wrapper">
-                        <h1 class="header-title">
+                <div class="header-intro">
+                    <div class="intro__title-container">
+                        <h1 class="intro__title">
                             Всем привет!
                         </h1>
-                        <h2 class="header-subtitle"> Я Александр - <span class="gray-text-title">начинающий веб-разработчик</span></h2>
+                        <h2 class="intro__subtitle"> Я Александр - <span class="intro__subtitle--gray">начинающий веб-разработчик</span></h2>
                     </div>
-                    <div class="header-img-container">
-                        <img src="/img/Alexander-Taimasov.png" alt="Alexander-Taimasov" class="header-img">
+                    <div class="intro__img-container">
+                        <img src="/img/Alexander-Taimasov.png" alt="Alexander-Taimasov" class="intro__img">
                     </div>
                 </div>
-               
-                
-        </div>
     </header>
     <main class="main">
-        <div class="wrapper-section">
             <section class="projects">
-                <h3 class="section-title" id="projects">Мои проекты</h3>
-                <div class="projects-cards">
-                    <div class="project-card">
-                        <div class="project-card-img-container">
-                            <img src="/img/project-homyakator.png" alt="" class="project-card-img">
+                <h3 class="section__title projects__title" id="projects">Мои проекты</h3>
+                <div class="projects__list">
+                    <div class="projects__item">
+                        <div class="project__img-container">
+                            <img src="/img/projects/homyakator/homyakator-market.png" alt="" class="project__img">
                         </div>
-                        <div class="project-card-info">
-                            <h4 class="project-card-title">Интернет-магазин корма "Хомякатор"</h4>
-                            <p class="project-card-description section-description">Проект создан с перспективой на будущее и предоставляет собой аналогию интернет-магазина для людей, но ориентированного на потребителей пушистых и щекастых, а также фанатов брутальных хомяков.</p>
-                            <p class="project-card-description section-description project-card-description-technology"> Стек: HTML, CSS, JavaScript.</p>
-                            <div class="project-card-links"><a href="https://homyakator.xn--80aag0apnud.xn--p1ai" class="project-card-link animation-link " target="_blank">Проект на сервере <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/ATaimasov/homyakator" class="project-card-link animation-link" target="_blank">Проект на GitHub <i class="fa-brands fa-github"></i> </a></div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-img-container">
-                            <img src="/img/project-discoverAmazinPlaces.png" alt="" class="project-card-img">
-                        </div>
-                        <div class="project-card-info">
-                            <h4 class="project-card-title">"Открой удивительные места в Японии"</h4>
-                            <p class="project-card-description section-description">Проект сверстан по макету <a href="https://www.figma.com/design/e35IoBt27x1aDotScGYAao/travel-landing-page-jacobvoyles-(Copy)?node-id=0-2&t=Qu2GQOnXCkauq1YP-1" class="project-card-description-link animation-link">Figma</a> и корректно открывается с любого устройства.</p>
-                            <p class="project-card-description section-description project-card-description-technology">Используемые технологии и подходы: HTML, CSS, Javascript, Figma.</p>
-                            <div class="project-card-links"><a href="https://amazing-places.xn--80aag0apnud.xn--p1ai" class="project-card-link animation-link" target="_blank">Проект на сервере <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/ATaimasov/Amazing-places" class="project-card-link animation-link" target="_blank">Проект на GitHub <i class="fa-brands fa-github"></i></a></div>
+                        <div class="project__info">
+                            <h4 class="project__info-title">Интернет-магазин корма "Хомякатор"</h4>
+                            <p class="section__description project__info-description ">Проект создан с перспективой на будущее и предоставляет собой аналогию интернет-магазина для людей, но ориентированного на потребителей пушистых и щекастых, а также фанатов брутальных хомяков.</p>
+                            <p class="section__description project__info-description  project__info-technology"> Стек: HTML, CSS, JavaScript.</p>
+                            <div class="project__link-container"><a href="https://homyakator.xn--80aag0apnud.xn--p1ai" class="project__link link--active" target="_blank">Проект на сервере <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/ATaimasov/homyakator" class="project__link link--active" target="_blank">Проект на GitHub <i class="fa-brands fa-github"></i> </a></div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-card-img-container">
-                            <img src="/img/project-burgers.png" alt="" class="project-card-img">
+                    <div class="projects__item">
+                        <div class="project__img-container">
+                            <img src="/img/projects/amazing-places/AmazinPlaces.png" alt="" class="project__img">
                         </div>
-                        <div class="project-card-info">
-                            <h4 class="project-card-title">"Бургеры на заказ"</h4>
-                            <p class="project-card-description section-description">Проект сверстан по макету <a href="https://www.figma.com/design/MKz55ReNMlbTq1ZK67YkzU/landing?node-id=0-1&t=mqgUoK2dwt4YgzkA-1" class="project-card-description-link animation-link">Figma</a> предоставляет собой одностраничный сайт с возможностью заполнения формы для обратной связи.</p>
-                            <p class="project-card-description section-description project-card-description-technology">Используемые технологии и подходы: HTML, CSS, JavaScript, Figma.</p>
-                            <div class="project-card-links"><a href="https://burgers.xn--80aag0apnud.xn--p1ai" class="project-card-link animation-link" target="_blank">Проект на сервере <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/ATaimasov/burgers" class="project-card-link animation-link" target="_blank">Проект на GitHub <i class="fa-brands fa-github"></i></a></div>
+                        <div class="project__info">
+                            <h4 class="project__info-title">"Открой удивительные места в Японии"</h4>
+                            <p class="section__description project__info-description ">Проект сверстан по макету <a href="https://www.figma.com/design/e35IoBt27x1aDotScGYAao/travel-landing-page-jacobvoyles-(Copy)?node-id=0-2&t=Qu2GQOnXCkauq1YP-1" class="project__info-description-link link--active" target="_blank">Figma</a> и корректно открывается с любого устройства.</p>
+                            <p class="section__description project__info-description  project__info-technology">Используемые технологии и подходы: HTML, CSS, Javascript, Figma.</p>
+                            <div class="project__link-container"><a href="https://amazing-places.xn--80aag0apnud.xn--p1ai" class="project__link link--active" target="_blank">Проект на сервере <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/ATaimasov/Amazing-places" class="project__link link--active" target="_blank">Проект на GitHub <i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="projects__item">
+                        <div class="project__img-container">
+                            <img src="/img/projects/burgers/burgers.png" alt="" class="project__img">
+                        </div>
+                        <div class="project__info">
+                            <h4 class="project__info-title">"Бургеры на заказ"</h4>
+                            <p class="section__description project__info-description">Проект сверстан по макету <a href="https://www.figma.com/design/MKz55ReNMlbTq1ZK67YkzU/landing?node-id=0-1&t=mqgUoK2dwt4YgzkA-1" class="project__info-description-link link--active" target="_blank">Figma</a> предоставляет собой одностраничный сайт с возможностью заполнения формы для обратной связи.</p>
+                            <p class="section__description project__info-description  project__info-technology">Используемые технологии и подходы: HTML, CSS, JavaScript, Figma.</p>
+                            <div class="project__link-container"><a href="https://burgers.xn--80aag0apnud.xn--p1ai" class="project__link link--active" target="_blank">Проект на сервере <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/ATaimasov/burgers" class="project__link link--active" target="_blank">Проект на GitHub <i class="fa-brands fa-github"></i></a></div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="about-me" id="about-me">
-                <h3 class="section-title">
+                <h3 class="section__title">
                     Обо мне
                 </h3>
-                <div class="about-me-description">
-                    <p class="about-me-text section-description">
+                <div class="about-me__info">
+                    <p class="section__description about-me__text">
                         Высшее образование у меня юридическое, получал в РАНХИГС в городе Орле. Впоследствии, поработав по профессии, понял, что юриспруденция не мое и решил войти в IT.
                     </p>
-                    <img src="/img/meme-voiti-v-aiti.jpg" alt="meme-voiti-v-aiti" class="about-me-image">
-                    <p class="about-me-text section-description">
+                    <img src="/img/meme/meme_voiti-v-aiti/meme-voiti-v-aiti.jpg" alt="meme-voiti-v-aiti" class="about-me__img">
+                    <p class="section__description about-me__text">
                         В свободное время занимаюсь самообразованием, изучаю Frontend через документацию, бесплатные и слитые курсы (извините). Из увлечений: занимаюсь спортом, выращиваю зелень на подоконнике и учусь играть на окарине, фанат Рикардо Милоса.
                     </p>
                     <div class="ricardo-container"></div>
-                    <img src="/img/meme-ricardo-flex.png" alt="Ricardo Flex" class="about-me-image">
-                    <p class="about-me-text section-description">
-                        Также мне с раннего детства нравится монтажить и создавать контент (в основном для себя, для души). Пример можно увидеть ниже или зайти на мой <a class= "project-card-link animation-link" href="https://www.youtube.com/channel/UCdCNa9fc2brZ_pqj_VK2rwg" target="_blank">ютуб-канал <i class="fa-brands fa-youtube"></i></a>
+                    <img src="/img/meme/meme_ricardo/meme_ricardo.png" alt="Ricardo Flex" class="about-me__img">
+                    <p class="section__description about-me__text">
+                        Также мне с раннего детства нравится монтажить и создавать контент (в основном для себя, для души). Пример можно увидеть ниже или зайти на мой <a class= "project__link link--active" href="https://www.youtube.com/channel/UCdCNa9fc2brZ_pqj_VK2rwg" target="_blank">ютуб-канал <i class="fa-brands fa-youtube"></i></a>
                     </p>
-                    <video src="/videos/coding-way(music version).mp4" class="about-me-video" autoplay loop muted></video>
-                    <i class="video-description">Как я вижу свой путь в IT</i>
+                    <video src="/videos/coding-way(music version).mp4" class="about-me__video" autoplay loop muted></video>
+                    <i class="about-me__video-description">Как я вижу свой путь в IT</i>
                 </div>
             </section>
 
             <section class="work-experience" id="work-experience">
-                <h3 class="section-title">
+                <h3 class="section__title">
                     Опыт работы
                 </h3>
-                <div class="work-experience-decription-beforeIT">
-                    <h4 class="work-experiense-subtitle">До прихода в IT</h4>
-                    <div class="work-experience-description-container">
-                        <p class="work-experience-description-text section-description">
+                <div class="work-experience__before-it">
+                    <h4 class="work-experiense__title">До прихода в IT</h4>
+                    <div class="work-experience__text-container">
+                        <p class="section__description work-experience__text">
                             В универе я пару месяцев подрабатывал в Тинькофф-Банке в качестве подработки, а после выпуска (в 2022 году) работал в нескольких юридических компаниях. По общему стажу это заняло 1.5 года. 
                         </p>
-                        <p class="work-experience-description-text section-description">
+                        <p class="section__description work-experience__text">
                             Первая юридическая компания познакомила меня с удаленной работой и развила во мне качество выполнять работу без тщательного контроля.
                         </p>
-                        <p class="work-experience-description-text section-description">
+                        <p class="section__description work-experience__text">
                             Вторая компания работала с иностранными клиентами. В рамках работы помогал коллегам решать задачи в различных сферах права, работал с документацией на английском языке. Хоть и работа относится к другой сфере, она меня научила ответственности, важности работы в команде и дала опыт деловой коммуникации на английском языке. 
                         </p>
                     </div>
                 </div>
-                    <div class="work-experience-description-container work-experience-decription-afterIT">
-                            <h4 class="work-experiense-subtitle work-experiense-subtitle-afterIT">В IT</h4>
-                            <p class="work-experience-description-text section-description">
+                    <div class="work-experience__text-container work-experience__after-it">
+                            <h4 class="work-experiense__title work-experiense__title-after-it">В IT</h4>
+                            <p class="section__description work-experience__text">
                                 Свой путь в IT я начал не так давно. Мыслями к этому пришел в августе 2023 года и начал изучать Frontend, так как все говорили о его легкости для новичков, вдобавок, мне нравится работать с визуалом.
                             </p>
-                            
-                                <img src="/img/meme-frontend.jpg" alt="frontend meme" class="work-experience-image">
-                           
-                        <h5 class="work-experience-description-subtitle">Работа саппортом</h5>
-                        <div class="work-experience-description-text-container-support">
-                            <p class="work-experience-description-text section-description">
+                                <img src="/img/meme/meme_come-into-frontend/meme_come-into-frontend.jpg" alt="frontend meme" class="work-experience__img">
+                        <h5 class="work-experience__subtitle">Работа саппортом</h5>
+                        <div class="work-experience__text-container-support">
+                            <p class="section__description work-experience__text">
                                 Уже в сентябре я уволился с последней работы в сфере юриспруденции и начал думать, как мне дальше быть, ведь для обучения нужно время.
                             </p>
-                            <p class="work-experience-description-text section-description">
+                            <p class="section__description work-experience__text">
                                 Брат, посоветовал начать с техподдержки, так как сам он начинал оттуда и впоследствии стал DevOps. В итоге я пошел к регистратору доменных имен и проработал там 9 месяцев. Параллельно я изучал все, что связано с Frontend-разработкой.
                             </p>
-                            <p class="work-experience-description-text section-description">
+                            <p class="section__description work-experience__text">
                                 Работа в техподдержке дала IT-базу, так как в процессе работы я по телефону консультировал и решал технические проблемы пользователей по доменам, ssl-сертификатам, хостингам и иным услугам.<br>Кроме того, она также научила понимать клиентов, выявлять их потребности и решать их, даже если клиент - бабушка. Ежедневный прямой контакт с потребителями, также дал и определенное понимание, с какими проблемами они чаще сталкиваются при взаимодействии с сайтом (UX).
                             </p>
-                            <p class="work-experience-description-text section-description">
+                            <p class="section__description work-experience__text">
                                 Уходя, из техподдержки, я понимал, что мне все еще не хватает знаний: я проседаю по JS и чувствуется нехватка готовых PET-проектов. При этом, работать на звонках я уже не мог - сдавали нервы.
                             </p>
                         </div>
                     
-                        <img src="/img/meme-support.png" alt="support meme" class="work-experience-image">
-                     
-                  
+                        <img src="/img/meme/meme_support/meme-support.png" alt="support meme" class="work-experience__img">
                     </div>
             </section>
-
             <section class="contacts" id="contacts">
-                <p class="section-description contacts-description">
-                    В данный момент времени я продолжаю обучаться и нахожусь в поиске работы. Если вы хотите связаться со мной, то можете написать мне на почту <a href="mailto:alexander.taimasov@gmail.com?subject=%D0%9F%D0%B8%D1%81%D1%8C%D0%BC%D0%BE%20%D0%B8%D0%B7%20%D0%A5%D0%BE%D0%B3%D0%B2%D0%B0%D1%80%D1%82%D1%81%D0%B0%20&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%0A%0A%D0%9C%D1%8B%20%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%B8%D1%81%D1%8C%20%D0%B2%D0%B0%D0%BC%D0%B8%20%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D1%8B%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5..." class="project-card-link animation-link">alexander.taimasov@gmail.com <i class="fa-solid fa-envelope"></i></a> или связаться по следующим каналам: <a href="#!" class="budget-link"><img src="https://img.shields.io/badge/LinkedIn-%230a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" class="img-budget-link"/></a> <a href="https://t.me/ATaimasov" class="budget-link"><img src="https://img.shields.io/badge/Telegram-%23229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge" class="img-budget-link"/></a>  <a href="https://orel.hh.ru/resume/2a4951a9ff0cdf7df50039ed1f74747767527a" class="budget-link"><img src="https://img.shields.io/badge/HeadHunter-%23e1011c?style=for-the-badge
-                        " alt="HeadHunter Badge" class="img-budget-link"/></a>
+                <p class="section__description contacts__info">
+                    В данный момент времени я продолжаю обучаться и нахожусь в поиске работы. Если вы хотите связаться со мной, то можете написать мне на почту <a href="mailto:alexander.taimasov@gmail.com?subject=%D0%9F%D0%B8%D1%81%D1%8C%D0%BC%D0%BE%20%D0%B8%D0%B7%20%D0%A5%D0%BE%D0%B3%D0%B2%D0%B0%D1%80%D1%82%D1%81%D0%B0%20&body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%0A%0A%D0%9C%D1%8B%20%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%B8%D1%81%D1%8C%20%D0%B2%D0%B0%D0%BC%D0%B8%20%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D1%8B%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5..." class="project__link link--active">alexander.taimasov@gmail.com <i class="fa-solid fa-envelope"></i></a> или связаться по следующим каналам: <a href="#!" class="budget-link"><img src="https://img.shields.io/badge/LinkedIn-%230a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" class="budget-link__img"/></a> <a href="https://t.me/ATaimasov" class="budget-link"><img src="https://img.shields.io/badge/Telegram-%23229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge" class="budget-link__img"/></a>  <a href="https://orel.hh.ru/resume/2a4951a9ff0cdf7df50039ed1f74747767527a" class="budget-link"><img src="https://img.shields.io/badge/HeadHunter-%23e1011c?style=for-the-badge
+                        " alt="HeadHunter Badge" class="budget-link__img"/></a>
                 </p>
             </section>
-        </div>
     </main>
     <footer class="footer">
-        <div class="footer-information">
-            <p class="stack">Разработано на основе макета <a class="footer-information-link animation-link" href="https://www.figma.com/design/h96DNWwE0gxClkL6zAG7i9/Lightfolio-(Copy)?node-id=1-2&t=5M4dB2a5c9t0ROhc-1">Figma</a> с помощью чистого HTML, CSS, JS</p>
+        <div class="footer__info">
+            <p class="footer__text">Разработано на основе макета <a class="footer__link link--active" href="https://www.figma.com/design/h96DNWwE0gxClkL6zAG7i9/Lightfolio-(Copy)?node-id=1-2&t=5M4dB2a5c9t0ROhc-1">Figma</a> с помощью чистого HTML, CSS, JS</p>
             <p class="who-made">Тут просто текст для общего вида</p>
         </div>
     </footer>
