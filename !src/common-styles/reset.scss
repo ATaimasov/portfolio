@@ -348,9 +348,12 @@ textarea {
     padding: 0.2em 0;
 }
 
-*,
-*::before, 
-*::after {
-    -webkit-box-sizing: border-box;
-    box-sizing        : border-box;
+
+// all elements inherit box-sizing from the root element, but if you need to change it, just return box-sizing: content-box; on some selector and all its descendants will inherit this property.
+html { 
+    box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+    box-sizing: inherit; 
 }

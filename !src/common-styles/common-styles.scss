@@ -26,21 +26,47 @@
   html {
     scroll-behavior   : smooth;
     font-size: $font-size-html;
+
+    @media (max-width: $screen-xxl) {
+      font-size: $font-size-html - 5%;
+    }
+
+    @media (max-width: $screen-xl) {
+      font-size: $font-size-html - 12.5%;
+    }
+
+    @media (max-width: $screen-lg) {
+      font-size: $font-size-html - 14%;
+    }
+
+    @media (max-width: $screen-md) {
+      font-size: $font-size-html - 17%;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: $font-size-html - 22.5%;
+    }
+   
+
+    
+    
+
 }
 
 body {
   font-size: $font-size-body;
 }
 
-.link--active {
-  transition: border 0.5s ease-in;
-  position: relative;
-  border: 1px solid transparent;
-}
 
 .wrapper {
     max-width: 1600px;
     margin: 0 auto;
+}
+
+.link--active {
+  transition: border 0.5s ease-in;
+  position: relative;
+  border: 1px solid transparent;
 }
 
 .link--active:hover {
