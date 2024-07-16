@@ -1,0 +1,38 @@
+
+.header {
+
+    &-nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 2%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        margin: 0.5% 1%;
+        padding: 0 0.3%;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: $font-size-header;
+        line-height: $line-height-text;
+        letter-spacing: $letter-spacing-text;
+        color: $color-link;
+    }
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+
+// section-title // black
+$color-main: #000;
+
+
+// header-title // gray-light
+$color-secondary: #757575;
+
+$color-link: #525252;
+
+// link--active:hover // gray-dark
+$color-link--active: #353434;
+
+// ✓ // green
+$color-technology-list: rgba(16, 136, 16, 0.678);
+
+
+
+$font-size-html  : 62.5%;
+$font-size-body  : 2rem;
+$font-size-header: 3rem;
+$font-size-h1    : 6.4rem;
+$font-size-h2    : 4.4rem;
+$font-size-h3    : 3.3rem;
+$font-size-text  : 2.5rem;
+$font-size-footer: 1.4rem;
+
+
+// header li, p, link, footer
+$line-height-text   : 150%;
+$letter-spacing-text: 0.01em;
+
+//  header-title, subtitle 
+$line-height-h1-h2   : 115%;
+$letter-spacing-h1-h2: 0.04em;
+
+//  header-title, subtitle 
+$line-height-h3   : 139%;
+$letter-spacing-h3: 0.02em;
+
+
+
+$screen-xs: 0;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
