@@ -1,31 +1,10 @@
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* inter-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/inter-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* inter-900 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/inter-v13-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
+//  poppings
+ @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
   html {
-    scroll-behavior   : smooth;
-    font-size: $font-size-html;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-size      : $font-size-html;
 
     @media (max-width: $screen-xxl) {
       font-size: $font-size-html - 5%;
@@ -60,17 +39,37 @@ body {
 
 .wrapper {
     max-width: 1600px;
-    margin: 0 auto;
+    margin   : 0 auto;
 }
 
-.link--active {
+//  :not because we need to restrict influnce of the effect on links into burger-menu
+.link--active:not(.header__list .link--active) {
   transition: border 0.5s ease-in;
-  position: relative;
-  border: 1px solid transparent;
+  position  : relative;
+  border    : 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid $color-main;
+      color        : $color-link--active;
+    }
 }
 
-.link--active:hover {
-    border-bottom: 1px solid black;
-    color: #353434
+// so we separate class for links in navigation which will be able only for size > 992px
+.header__list .link--active  {
+// instead of using js-code with window.innerWidth (etc), we use media with min-width 
+  @media (min-width: $screen-lg) {
+    transition: border 0.5s ease-in;
+    position  : relative;
+    border    : 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid $color-main;
+        color        : $color-link--active;
+      }
 }
+  
+}
+// despite we duplicating code , eventually we avoid using js code. So it's good for cpu usage 
+
+
 

@@ -12,19 +12,12 @@ burgerButton.addEventListener('click', function(){
 
 const header__item = document.querySelectorAll('.header__item');
 const header__linkIcon = document.querySelectorAll('.header__link-icon');
+const header__link = document.querySelectorAll('.header__link');
 
-if (window.innerHeight < 992) {
 
-    header__item.forEach(item => { 
-        item.classList.remove('link--active');
-    })
 
     
 
-
-    }
     
 
-    header__linkIcon.forEach(item => { 
-        item.classList.add('.header__link-icon--active');
-    })
+ 

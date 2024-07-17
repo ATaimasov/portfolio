@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -333,31 +334,9 @@ html {
   box-sizing: inherit;
 }
 
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/inter-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* inter-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/inter-v13-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* inter-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/inter-v13-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
 html {
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
   font-size: 62.5%;
 }
 @media (max-width: 1600px) {
@@ -395,15 +374,26 @@ body {
   margin: 0 auto;
 }
 
-.link--active {
+.link--active:not(.header__list .link--active) {
   transition: border 0.5s ease-in;
   position: relative;
   border: 1px solid transparent;
 }
-
-.link--active:hover {
-  border-bottom: 1px solid black;
+.link--active:not(.header__list .link--active):hover {
+  border-bottom: 1px solid #000;
   color: #353434;
+}
+
+@media (min-width: 992px) {
+  .header__list .link--active {
+    transition: border 0.5s ease-in;
+    position: relative;
+    border: 1px solid transparent;
+  }
+  .header__list .link--active:hover {
+    border-bottom: 1px solid #000;
+    color: #353434;
+  }
 }
 
 .section__title {
@@ -755,6 +745,16 @@ body {
     margin: 5% 15%;
   }
 }
+@media (max-width: 768px) {
+  .header__item {
+    margin: 5% 14%;
+  }
+}
+@media (max-width: 480px) {
+  .header__item {
+    margin: 9% 14%;
+  }
+}
 .header__link {
   text-decoration: none;
   font-weight: 400;
@@ -768,34 +768,40 @@ body {
     font-size: 5.4rem;
     padding-right: 5%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 90% 10%;
   }
+}
+.header__link-icon {
+  color: #000;
+  opacity: 0.85;
+  justify-self: end;
 }
 @media (max-width: 992px) {
   .header__link-icon {
     justify-self: center;
     font-size: 7rem;
   }
+  .header__link-icon--active {
+    transition: font-size 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  .header__link:hover .header__link-icon--active {
+    font-size: 7.7rem;
+  }
 }
-.header__link-icon--active {
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transform: scale(1);
-}
-.header__link-icon--active:hover {
-  font-size: 8rem;
+@media (max-width: 480px) {
+  .header__link {
+    font-size: 4.4rem;
+  }
 }
 .header__burger {
   display: none;
   width: 40px;
   height: 4px;
-  margin: 8px;
+  margin: 70px;
   background-color: #525252;
   transform: translate(-50%, -50%);
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   cursor: pointer;
-  position: fixed;
-  top: 5%;
-  right: 9%;
 }
 .header__burger:hover:not(.header__burger--open) {
   width: 30px;
@@ -832,6 +838,11 @@ body {
 @media (max-width: 992px) {
   .header__burger {
     display: block;
+  }
+}
+@media (max-width: 480px) {
+  .header__burger {
+    margin: 55px;
   }
 }
 
@@ -879,12 +890,17 @@ body {
     max-width: 350px;
   }
 }
+@media (max-width: 480px) {
+  .intro__img-container {
+    max-width: 300px;
+  }
+}
 .intro__img {
   max-width: 100%;
   clip-path: circle(45% at 48% 48%);
 }
 .intro__title-container {
-  padding: 0 7%;
+  padding: 0 5%;
 }
 @media (max-width: 992px) {
   .intro__title-container {
@@ -910,11 +926,13 @@ body {
   letter-spacing: 0.04em;
   color: #000;
 }
-.intro__sibtitle:not(.intro__subtitle--gray) {
-  white-space: nowrap;
-}
 .intro__subtitle--gray {
   color: #757575;
+}
+@media (max-width: 992px) {
+  .intro__subtitle {
+    margin-top: 2%;
+  }
 }
 .intro__text-container {
   margin-top: 2%;
@@ -924,7 +942,8 @@ body {
   .intro__text-container {
     grid-row: 4;
     grid-column: span 2;
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
 }
 @media (max-width: 768px) {
@@ -941,7 +960,12 @@ body {
 }
 @media (max-width: 992px) {
   .intro__text {
-    padding: 3% 2%;
+    padding: 3% 3%;
+  }
+}
+@media (max-width: 480px) {
+  .intro__text {
+    padding: 1% 5%;
   }
 }
 .intro__link {
@@ -951,4 +975,88 @@ body {
   letter-spacing: 0.01em;
   color: #525252;
   text-decoration: none;
+}
+
+.social-links {
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  bottom: 2%;
+  left: 0%;
+  width: 100%;
+  justify-content: center;
+}
+.social-links__item {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+}
+.social-links__link {
+  color: black;
+}
+.social-links__github--active:hover, .social-links__github--active:hover .social-links__tooltip, .social-links__github--active:hover .social-links__tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+.social-links__linkedin--active:hover, .social-links__linkedin--active:hover .social-links__tooltip, .social-links__linkedin--active:hover .social-links__tooltip::before {
+  background: rgb(10, 102, 194);
+  color: #ffffff;
+}
+.social-links__telegram--active:hover, .social-links__telegram--active:hover .social-links__tooltip, .social-links__telegram--active:hover .social-links__tooltip::before {
+  background: rgb(34, 158, 217);
+  color: #ffffff;
+}
+.social-links__link--active {
+  color: currentColor;
+}
+.social-links__tooltip {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 8px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: none;
+  width: 80px;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .social-links__tooltip {
+    display: inline;
+  }
+  .social-links__tooltip:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .social-links__item:hover .social-links__tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+.social-links__link__icon {
+  font-size: inherit;
 }
