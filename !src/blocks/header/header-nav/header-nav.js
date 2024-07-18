@@ -2,12 +2,13 @@
 // burger 
 
 const burgerButton = document.getElementById('burger-menu');
-const burgerList = document.getElementById('header__list')
+const burgerList = document.getElementById('header__list');
+const socialLinks = document.getElementById('social-links'); 
 
 burgerButton.addEventListener('click', function(){
     burgerButton.classList.toggle('header__burger--open');
     burgerList.classList.toggle('header__list-burger--open');
-
+    socialLinks.classList.toggle('social-links--visible'); // fpoter adaptive script
 });
 
 const header__item = document.querySelectorAll('.header__item');

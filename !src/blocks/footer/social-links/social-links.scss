@@ -7,6 +7,15 @@
     width          : 100%;
     justify-content: center;
 
+    @media (max-width: $screen-lg), (max-height: $screen-md) {
+        transition     : $transition-common;
+        opacity: 0;
+    }
+
+    &--visible {
+        opacity: 1;
+    }
+
 
     &__item {
         width          : 50px;

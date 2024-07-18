@@ -37,10 +37,7 @@ body {
 }
 
 
-.wrapper {
-    max-width: 1600px;
-    margin   : 0 auto;
-}
+
 
 //  :not because we need to restrict influnce of the effect on links into burger-menu
 .link--active:not(.header__list .link--active) {
@@ -57,7 +54,7 @@ body {
 // so we separate class for links in navigation which will be able only for size > 992px
 .header__list .link--active  {
 // instead of using js-code with window.innerWidth (etc), we use media with min-width 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-lg) and (min-height: $screen-md) {
     transition: border 0.5s ease-in;
     position  : relative;
     border    : 1px solid transparent;
@@ -70,6 +67,5 @@ body {
   
 }
 // despite we duplicating code , eventually we avoid using js code. So it's good for cpu usage 
-
 
 
