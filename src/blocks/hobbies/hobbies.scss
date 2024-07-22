@@ -1,0 +1,44 @@
+.hobbies {
+
+    grid-template-columns: 45% 25%;
+
+    @media (max-width: $screen-xxl) {
+        grid-template-columns: 45% 30%;
+    }
+
+    @media (max-width: $screen-xl) {
+        grid-template-columns: 45% 40%;
+    }
+    @media (max-width: $screen-lg) {
+        grid-template-columns: repeat(2, 40%);
+    }
+
+    @media (max-width: $screen-md) {
+        grid-template-columns: repeat(2, 45%);
+    }
+
+
+    &__img-container { 
+        grid-column: 2;
+    }
+
+    &__img {
+        // clip-path: polygon(13% 3%, 75% 3%, 100% 50%, 75% 97%, 13% 97%);
+        clip-path: polygon(23% 3%, 85% 3%, 85% 97%, 23% 97%, 0% 50%);
+    }
+
+    &__text-container {
+        grid-column: 1;
+
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            grid-column: span 2;
+        }
+    }
+
+    &__title-container {
+        grid-row: 1;
+    }
+
+
+}
+

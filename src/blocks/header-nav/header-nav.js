@@ -11,6 +11,12 @@ burgerButton.addEventListener('click', function(){
     burgerButton.classList.toggle('header__burger--open');
     burgerList.classList.toggle('header__list-burger--open');
     socialLinks.classList.toggle('social-links--visible'); // fpoter adaptive script
+
+    if (burgerButton.classList.contains('header__burger--open')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'visible';
+    }
 });
 
 const header__item = document.querySelectorAll('.header__item');

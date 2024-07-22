@@ -1,13 +1,19 @@
   // диспетчер подключений
 
 
-@import "variables";
-@import "./common-styles/reset.scss";
-@import "./common-styles/common-styles.scss";
+@import "./base/variables";
+@import "./base/reset.scss";
+@import "./base/common-styles.scss";
 
 @import "../style.scss";
 
 @import "../blocks/header-nav/header-nav.scss";
-@import "../blocks/intro/intro.scss";
 @import "../blocks/social-links/social-links.scss";
+@import "../blocks/intro/intro.scss";
+
+@import "../blocks/about-me/about-me.scss";
+
+@import "../blocks/education/education.scss";
+@import "../blocks/hobbies/hobbies.scss";
+@import "../blocks/videomaking/videomaking.scss";
 

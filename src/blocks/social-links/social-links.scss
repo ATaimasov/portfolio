@@ -6,10 +6,21 @@
     left           : 0%;
     width          : 100%;
     justify-content: center;
+    user-select    : none;
 
     @media (max-width: $screen-lg), (max-height: $screen-md) {
-        transition     : $transition-common;
-        opacity: 0;
+
+    // slow animation when opening the burger and common animation when closing it
+        transition: all 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        opacity   : 0;
+
+        &:not(&--visible) {
+            transition: $transition-common;
+        }
+    }
+
+    @media print {
+        display: none;
     }
 
     &--visible {

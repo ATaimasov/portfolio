@@ -15,14 +15,13 @@ export const copySVG = () => {
 }
 
 export const copyVideos = () => {
-    return app.gulp.src(app.path.src.videos)
+    return app.gulp.src(app.path.src.videos, { encoding: false })
+    .pipe(app.plugins.rename ( {
+        dirname: ''
+    }))
         .pipe(app.gulp.dest(app.path.build.videos))
 }
 
-export const copyFonts = () => {
-    return app.gulp.src(app.path.src.fonts)
-        .pipe(app.gulp.dest(app.path.build.fonts))
-}
 
 export const copyFavicons = () => {
     return app.gulp.src(app.path.src.favicons)
