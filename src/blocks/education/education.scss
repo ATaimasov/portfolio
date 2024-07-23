@@ -1,13 +1,47 @@
 .education {
 
+    &__img-container {
 
-    &__img {
-        clip-path: polygon(17% 0%, 78% 0%, 100% 50%, 78% 100%, 17% 100%);
+        @media (max-width: $screen-sm) {
+            max-width: 50dvh;
+        }
 
         @media (max-height: 600px) and (min-width: $screen-sm) {
-            clip-path: polygon(22% 0%, 83% 0%, 83% 100%, 22% 100%, 0% 50%);
+            grid-column: span 2;
+            grid-row: 1;
         }
     }
 
+    &__img {
+        clip-path: polygon(17% 0%, 78% 0%, 100% 50%, 78% 100%, 17% 100%);
+        margin-left: 0;
+    
 
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            clip-path: polygon(22% 0%, 83% 0%, 83% 100%, 22% 100%, 0% 50%);
+            margin-left: 5%;
+        }
+
+        @media (max-height: 600px) and (min-width: $screen-sm), (max-width: $screen-lg) {
+            clip-path: none;
+            margin-left: 0;
+            border-radius: 50px;
+        }
+
+    }
+
+    &__title-container {
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            grid-column: span 2;
+            grid-row: 2;
+        }
+
+        @media (max-width: $screen-sm) {
+            padding: 5%;
+        }
+
+        @media (min-width: $screen-lg) and (max-height: 600px), (max-width: $screen-lg) {
+            padding: 2% 0;
+        }
+    }
 }

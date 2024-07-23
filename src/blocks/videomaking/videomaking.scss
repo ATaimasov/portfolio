@@ -1,21 +1,90 @@
-.videomaking {
+.videomaking { 
+    
+    @media (max-height: 600px) and (min-width: $screen-sm) {
+        grid-template-columns: 40% 30%;
+    }
 
     &__video-container {
         display       : flex;
         flex-direction: column;
         align-items   : center;
+
+        @media (max-width: $screen-sm) {
+            max-width: 50dvh;
+        }
+
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            grid-column: span 2;
+            grid-row: 5;
+        }
     }
 
     &__video-description {
             margin    : 0 auto;
             font-style: italic;
-            margin    : 30px;
             text-align: center;
-        }
+    }
 
     &__video {
         border-radius: 100px;
-}
+        padding: 5%;
+    }
+
+    &__title-container {
+        justify-self: baseline;
+        margin: 5% 0 0 0;
+
+        @media (max-width: $screen-lg) {
+            justify-self: center;
+            margin: 0;
+        }
+
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            justify-self: auto;
+            margin: 0;
+        }
+
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            grid-row: 1;
+            grid-column: span 2;
+        }
+
+        @media (min-width: $screen-lg) and (max-height: 600px), (max-width: $screen-lg) {
+            padding: 2% 0;
+        }
+    }
+
+    &__text-container {
+        align-self: baseline;
+
+        
+        @media (max-width: $screen-lg) {
+            grid-template-columns: none;
+            grid-template-rows: 50% 50%;
+            justify-items: end;
+        }
+
+        @media (max-width: $screen-sm) {
+            grid-template-rows: none;
+        }
+
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            justify-items: center;
+            margin-top: 0;
+            display: block;
+        }
+
+        @media (max-width: $screen-sm) {
+            padding: 5% 0;
+        }
+  
+    }
+
+    &__text {
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            padding: 2% 3%;
+        }
+    }
 
 }
 

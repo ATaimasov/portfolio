@@ -49,7 +49,6 @@ export const fontsStyle = () => {
                                 if (newFileOnly !== fontFileName) {
                                     let fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
                                     let fontWeights = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName;
-
                                     if (fontWeights.toLowerCase() === 'thin') {
                                         fontWeights = 100;
                                     } else if (fontWeights.toLowerCase() === 'extralight') {
