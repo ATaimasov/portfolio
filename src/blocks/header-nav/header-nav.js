@@ -23,3 +23,25 @@ const header__item = document.querySelectorAll('.header__item');
 const header__linkIcon = document.querySelectorAll('.header__link-icon');
 const header__link = document.querySelectorAll('.header__link');
 }
+
+export const scrollFading = () => {
+    
+    const navigation = document.getElementById('header__list');
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+
+        navigation.classList.add('header__list--fading');
+
+        this.setTimeout(() => {
+            navigation.classList.remove('header__list--fading');
+        }, 200)
+
+        const sections = document.querySelectorAll('section');
+        for (let section of sections) {
+         console.log(section.offsetTop )
+        }
+
+    })
+
+  
+}

@@ -1,0 +1,21 @@
+.section {
+
+    &__title-container {
+       grid-row: 1;
+       grid-column: span 2; 
+    }
+
+    &__text-container {
+        grid-column: span 2;
+        margin-top: 0;
+    }
+
+    &__subtitle {
+        grid-row: 1;
+        grid-column: span 2; 
+    }
+
+    &__text {
+        padding: 1% 5%;
+    }
+}
