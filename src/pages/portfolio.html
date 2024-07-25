@@ -11,9 +11,15 @@
     })
 </head>
 <body>
-    @@include('../blocks/header-nav/header-nav.html', {})
-    
-    @@include('../blocks/social-links/social-links.html', {})
+    <header>
+        @@include('../blocks/header-nav/header-nav.html', {})
+    </header>
+    <main>
+        @@include('../blocks/swiper-projects/swiper-projects.html', {})
+    </main>
+    <footer>
+        @@include('../blocks/social-links/social-links.html', {})
+    </footer>
     <script src="../js/app.min.js"></script>
     <script src="https://kit.fontawesome.com/472ce6f0d7.js" crossorigin="anonymous"></script>
 </body>

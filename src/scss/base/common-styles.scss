@@ -85,7 +85,6 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  overflow-y: auto;
   padding-top: 1%;
 
   &__wrapper {
@@ -96,10 +95,6 @@ body {
     align-items          : center;
     width                : 100%;
     
-    // position             : absolute;
-    // transform            : translateY(-50%);
-    // top                  : 50%;
-    // left                 : 0;
 
 
     @media print {
@@ -160,6 +155,7 @@ body {
 
     &__img {
         max-width: 100%;
+        pointer-events: none;
     }
     
     &__title-container {

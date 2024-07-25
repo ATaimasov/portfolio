@@ -1,22 +1,29 @@
   // диспетчер подключений
 
+// libs
+@import "../../node_modules/swiper/swiper-bundle.css";
 
+// base
 @import "./base/variables";
 @import "./base/reset.scss";
 @import "./base/common-styles.scss";
 
 @import "../style.scss";
 
+
+// blocks
+
+// index.html
 @import "../blocks/header-nav/header-nav.scss";
 @import "../blocks/social-links/social-links.scss";
 @import "../blocks/intro/intro.scss";
-
-@import "../blocks/about-me/about-me.scss";
-
 @import "../blocks/education/education.scss";
 @import "../blocks/hobbies/hobbies.scss";
 @import "../blocks/videomaking/videomaking.scss";
 
+// experience.html
 @import "../blocks/experience-before-IT/experience-before-it.scss";
 @import "../blocks/experience-after-it/experience-after-it.scss";
 
+// projects
+@import "../blocks/swiper-projects/swiper-projects.scss";
