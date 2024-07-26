@@ -1,41 +1,44 @@
 
 // libs
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination, EffectCube, Mousewheel, Navigation} from 'swiper/modules';
 
  const swiperBeforeIt = new Swiper('.swiper-before-it', {
-    modules: [Navigation, Pagination],
-    pagination: {
-        el: ".swiper-pagination",
-      },
+    modules: [Pagination, EffectCube, Mousewheel ],
     grabCursor: true,
-    effect: "flip",
-    speed: 500,
+    effect: "cube",
+    speed: 1000,
     loop: false,
-    clickable: true,
     mousewheel: {
     invert: false,
     sensitivity: 1,
   },
+  pagination: {
+    el: ".swiper-pagination__before-it",
+    clickable: true,
+  },
+  
   });
 
   swiperBeforeIt.enable();
 
 
   const swiperAfterIt = new Swiper('.swiper-after-it', {
-    modules: [Navigation, Pagination],
-    pagination: {
-        el: ".swiper-pagination-2",
-      },
+    modules: [Pagination, EffectCube, Mousewheel],
     grabCursor: true,
-    effect: "flip",
-    speed: 500,
+    effect: "cube",
+    speed: 1000,
     loop: false,
-    clickable: true,
     mousewheel: {
     invert: false,
     sensitivity: 1,
   },
+  pagination: {
+    el: ".swiper-pagination__after-it",
+    clickable: true,
+  },
+ 
+
   });
 
   swiperAfterIt.enable();

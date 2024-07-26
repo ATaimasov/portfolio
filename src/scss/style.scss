@@ -3,6 +3,7 @@
 // libs
 @import "../../node_modules/swiper/swiper-bundle.css";
 
+
 // base
 @import "./base/variables";
 @import "./base/reset.scss";
@@ -22,8 +23,5 @@
 @import "../blocks/videomaking/videomaking.scss";
 
 // experience.html
-@import "../blocks/experience-before-IT/experience-before-it.scss";
-@import "../blocks/experience-after-it/experience-after-it.scss";
+@import "../blocks/section-swiper/section-swiper.scss";
 
-// projects
-@import "../blocks/swiper-projects/swiper-projects.scss";
