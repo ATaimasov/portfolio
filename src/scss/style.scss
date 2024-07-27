@@ -1,27 +1,30 @@
   // диспетчер подключений
 
 // libs
-@import "../../node_modules/swiper/swiper-bundle.css";
+@import "../../node_modules/swiper/swiper-bundle";
+@import "../fonts/fontello/css/icons";
+@import "../fonts/fontello/css/custom-icon-styles";
 
 
 // base
 @import "./base/variables";
 @import "./base/reset.scss";
-@import "./base/common-styles.scss";
+@import "./base/common-styles";
+@import "./base/animation";
 
-@import "../style.scss";
+@import "../style";
 
 
 // blocks
 
 // index.html
-@import "../blocks/header-nav/header-nav.scss";
-@import "../blocks/social-links/social-links.scss";
-@import "../blocks/intro/intro.scss";
-@import "../blocks/education/education.scss";
-@import "../blocks/hobbies/hobbies.scss";
-@import "../blocks/videomaking/videomaking.scss";
+@import "../blocks/header-nav/header-nav";
+@import "../blocks/social-links/social-links";
+@import "../blocks/intro/intro";
+@import "../blocks/education/education";
+@import "../blocks/hobbies/hobbies";
+@import "../blocks/videomaking/videomaking";
 
 // experience.html
-@import "../blocks/section-swiper/section-swiper.scss";
+@import "../blocks/section-swiper/section-swiper";
 

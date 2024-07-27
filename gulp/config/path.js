@@ -22,6 +22,7 @@ export const path = {
         images  : `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp,avif}`,
         svg     : `${srcFolder}/blocks/**/*.svg`,
         videos  : `${srcFolder}/blocks/**/*.mp4`,
+        fonts  : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
         favicons: `${srcFolder}/favicons/*.*`,
     },
     watch: {
@@ -31,6 +32,7 @@ export const path = {
         images  : `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp,avif}`,
         svg     : `${srcFolder}/blocks/**/*.svg`,
         videos  : `${srcFolder}/blocks/**/*.mp4`,
+        fonts  : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
         favicons: `${srcFolder}/img/favicons/*.*`,
     },
     clean      : buildFolder,
