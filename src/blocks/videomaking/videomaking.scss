@@ -54,6 +54,13 @@
         }
     }
 
+    &__title {
+        @media (max-width: 600px) and (max-height: $screen-sm) {
+            font-size: $font-size-h3;
+
+        }
+    }
+
     &__text-container {
         align-self: baseline;
 
@@ -84,6 +91,11 @@
         @media (max-height: 600px) and (min-width: $screen-sm) {
             padding: 2% 3%;
         }
+
+        
+            @media (max-width: 600px) and (max-height: $screen-sm) {
+                font-size: $font-size-text - 0.5rem;
+            }
     }
 
 }

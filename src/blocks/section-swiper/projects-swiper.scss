@@ -1,0 +1,56 @@
+.projects {
+
+    &__wrapper {
+        row-gap: 20px;
+        grid-template-columns: 40%;
+        grid-template-rows: 15% 80% 5%; 
+
+        @media (max-width:$screen-xxl) {
+            grid-template-columns: 50%;
+        }
+        
+        @media (max-width:$screen-xl) {
+            grid-template-columns: 45%;
+        }
+
+        @media (max-width:$screen-lg) {
+            grid-template-columns: 75%;
+        }
+
+
+        @media (max-width: $screen-md) and (max-height: $screen-sm) {
+            padding-bottom: 15px;
+            grid-template-rows: 15% 80% 1%;
+        }
+
+        
+
+        @media (max-height: $screen-sm) and (max-width: $screen-md) {
+            grid-template-rows: 15% 67% 21%;
+        }
+
+        @media (max-height: $screen-sm) and (max-width: $screen-lg) {
+            grid-template-rows: 8% 78% 5%;
+        }
+
+
+    }
+
+    &__img-container {
+        @media (max-height: $screen-sm) and (max-width: $screen-md) {
+        max-width: 80%;
+        }
+
+        @media (max-height: $screen-sm) and (max-width: $screen-lg) {
+            max-width: 60%;
+        }
+    }
+
+    
+
+    &__img {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+

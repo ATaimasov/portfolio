@@ -20,16 +20,17 @@
 
 
     &-pagination__before-it,
-    &-pagination__after-it {
+    &-pagination__after-it,
+    &-pagination__projects {
         position: static;
         z-index: 4;
         text-align: center;
         transition: .3s opacity;
         transform: translate3d(0, 0, 0);
 
-        @media (min-width: $screen-sm) {
-            margin-top: 20px;
-        }
+        // @media (min-width: $screen-sm) {
+        //     margin-top: 20px;
+        // }
     }
 
     &-pagination-bullet {
@@ -55,13 +56,14 @@
     justify-content: center;
 
     &__wrapper {
-        row-gap: 25px;
-        grid-template-columns: 50%;
+        row-gap              : 10px;
+        grid-template-columns: 51%;
         display              : grid;
         justify-content      : center;
         justify-items        : center;
         align-items          : center;
         width                : 100%;
+        grid-template-rows   : 10% 90%;
 
    
         @media (max-width: $screen-xl) {
@@ -71,7 +73,6 @@
 
         @media (max-width: $screen-lg) {
             grid-template-columns: 75%;
-            grid-template-rows: 20% 80%;
         }
 
         @media (max-height: $screen-sm) {
@@ -79,8 +80,8 @@
         }
 
         @media (max-width: $screen-md) and (max-height: $screen-sm) {
-            grid-template-rows: 10% 78%;
-            row-gap: 0px;
+            // grid-template-rows: 10% 78%;
+            // row-gap: 15px;
         }
         
     }
