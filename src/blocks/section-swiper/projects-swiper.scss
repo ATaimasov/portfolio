@@ -35,6 +35,10 @@
 
 
     }
+}
+
+.project {
+
 
     &__img-container {
         @media (max-height: $screen-sm) and (max-width: $screen-md) {
@@ -52,5 +56,90 @@
         max-width: 100%;
         max-height: none;
     }
+
+    // &__img-container:hover + &__info-container,
+    // &__info-container:hover {
+    //     bottom: 0;
+    // }
+
+    &__info {
+        &-container {
+            position: absolute;
+            bottom: -125%;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            border-radius: 4px;
+            background: rgba(255,255,255,.75);
+            backdrop-filter: blur(10px);
+            transition: .3s;
+            // justify-content: center;
+            align-items: center;
+            cursor: default;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            "header header"
+            "stack description"
+            "server github";
+
+            &--opened {
+                bottom: 0;
+            }
+
+        }
+
+    }
+
+
+
+    &__link {
+        padding: 0;
+        margin: 10%;
+        border: 1px solid;
+        display:flex;
+        justify-content: center;
+        cursor: pointer;
+        transition: .1s linear;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: $color-selection;
+        }
+    }
+
+    &__button-close {
+        font-size: 2em;
+    }
+
+
+    &__header-container {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        align-items: center;
+    }
+
+  
+    &__stack {
+        grid-area: stack;
+    }
+
+    &__server {
+        grid-area: server;
+        
+
+    }
+
+    &__github {
+        grid-area: github;
+
+    }
+
+    &__description {
+        grid-area: description;
+       
+
+    }
 }
 
+// приделать стрелки вместо кнопок, и сделать чтобы нельзя было управлять клавиатурой и колесом мыши 
