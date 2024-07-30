@@ -44,7 +44,8 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
 
   export const swiperProjects = new Swiper('.swiper-projects', {
     modules: [Pagination, EffectFade, Mousewheel, Autoplay, Keyboard],
-    grabCursor: true,
+    grabCursor: false,
+    simulateTouch: false,
     speed: 1000,
     effect: 'fade',
     loop: true,
@@ -60,10 +61,10 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
   keyboard: {
     enabled: true,
   },
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: true,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true,
+  },
 
   });
 

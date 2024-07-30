@@ -6,6 +6,10 @@
         top       : 0;
         min-height: 70px;
         z-index   : 5;
+
+        @media (min-width: $screen-lg) and (min-height: $screen-md) {
+            background-color: white;
+        }
         
         
         @media print {

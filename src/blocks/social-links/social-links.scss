@@ -8,6 +8,14 @@
     justify-content: center;
     user-select    : none;
 
+    @media (min-width: $screen-lg) and (min-height: $screen-md) {
+        bottom: 50%;
+        transform: translateY(50%);
+        flex-direction: column;
+        left: 0.5%;
+        z-index: 0;
+    }
+
     @media (max-width: $screen-lg), (max-height: $screen-md) {
 
     // slow animation when opening the burger and common animation when closing it
@@ -115,6 +123,11 @@
             opacity       : 1;
             visibility    : visible;
             pointer-events: auto;
+
+            // @media (min-width: $screen-lg) and (min-height: $screen-md) {
+            //     left: 65px;
+            //     top: 10px;
+            // }
         }
     
     }

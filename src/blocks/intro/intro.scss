@@ -4,4 +4,8 @@
         clip-path: circle(45% at 48% 48%);
     }
 
+   &__link:hover ~ &__pointer {
+       margin-left: 0;
+   }
+   
 }

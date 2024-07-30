@@ -3,7 +3,8 @@
     &__wrapper {
         row-gap: 20px;
         grid-template-columns: 40%;
-        grid-template-rows: 15% 80% 5%; 
+        // grid-template-rows: 15% 80% 5%; 
+        grid-template-rows: 8% 85% 10%;
 
         @media (max-width:$screen-xxl) {
             grid-template-columns: 50%;
@@ -14,7 +15,7 @@
         }
 
         @media (max-width:$screen-lg) {
-            grid-template-columns: 75%;
+            grid-template-columns: 100%;
         }
 
 
@@ -29,16 +30,14 @@
             grid-template-rows: 15% 67% 21%;
         }
 
-        @media (max-height: $screen-sm) and (max-width: $screen-lg) {
-            grid-template-rows: 8% 78% 5%;
-        }
+       
 
 
     }
 }
 
 .project {
-
+    cursor: pointer;
 
     &__img-container {
         @media (max-height: $screen-sm) and (max-width: $screen-md) {
@@ -46,8 +45,10 @@
         }
 
         @media (max-height: $screen-sm) and (max-width: $screen-lg) {
-            max-width: 60%;
+            max-width: 45%;
         }
+        
+        
     }
 
     
@@ -82,6 +83,14 @@
             "stack description"
             "server github";
 
+            @media (max-height: $screen-sm) and (max-width: $screen-md) {
+                max-width: 80%;
+            }
+        
+            @media (max-height: $screen-sm) and (max-width: $screen-lg) {
+                max-width: 45%;
+            }
+
             &--opened {
                 bottom: 0;
             }
@@ -100,6 +109,7 @@
         justify-content: center;
         cursor: pointer;
         transition: .1s linear;
+        text-decoration: none;
 
         &:hover {
             transform: scale(1.1);
@@ -122,6 +132,18 @@
   
     &__stack {
         grid-area: stack;
+
+        &-list {
+            // grid-column: span 2;
+            // grid-row: span 2;
+            align-self: baseline;
+            
+            &:last-child {
+                grid-column: span 2;
+            }
+        }
+
+       
     }
 
     &__server {
@@ -138,6 +160,23 @@
     &__description {
         grid-area: description;
        
+        &-text {
+            grid-column: span 2;
+            text-align: justify;
+
+            &:last-child {
+                text-align: right;
+            }
+
+            &:nth-of-type(2):has(+ &:nth-of-type(3)) {
+                text-align: justify;
+            }
+        }
+
+        &-study {
+            display: flex;
+            justify-content: space-between;
+        }
 
     }
 }

@@ -17,8 +17,5 @@ isWebp();
 import { burger } from '../blocks/header-nav/header-nav.js';
 burger();
 
-import { scrollFading } from '../blocks/header-nav/header-nav.js';
-scrollFading();
-
 import { projects} from '../blocks/section-swiper/swiper-projects.js'
 projects();

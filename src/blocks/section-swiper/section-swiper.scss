@@ -42,13 +42,6 @@
 }
 
 
-.after-it__wrapper {
-    grid-template-rows: 10% 80%;
-}
-
-.before-it__wrapper {
-    grid-template-rows: 20% 70%;
-}
 
 
 .section-swiper {
@@ -63,8 +56,11 @@
         justify-items        : center;
         align-items          : center;
         width                : 100%;
-        grid-template-rows   : 10% 90%;
+        grid-template-rows   : 8% 90% ;
 
+        @media(min-height: $screen-md) {
+            grid-template-rows: 15% 90% 60px;
+        }
    
         @media (max-width: $screen-xl) {
             grid-template-columns: 60%;
@@ -72,22 +68,27 @@
         }
 
         @media (max-width: $screen-lg) {
-            grid-template-columns: 75%;
+            grid-template-columns: 100%;
         }
 
         @media (max-height: $screen-sm) {
             row-gap: 5px;
+            grid-template-rows   : 8% 90% ;
         }
 
-        @media (max-width: $screen-md) and (max-height: $screen-sm) {
-            // grid-template-rows: 10% 78%;
-            // row-gap: 15px;
+        @media (max-width: 600px) and (max-height: $screen-sm) {
+            row-gap: 0px;
+            grid-template-rows: 7% 88% 25px;
         }
+    
+
+       
         
     }
 
     &__title-container {
         display: flex;
+
     }
 
 
@@ -95,6 +96,11 @@
         @media (max-width: $screen-sm) {
            text-align: center;
         }
+
+        @media (max-width: 600px) and (max-height: $screen-sm) {
+            font-size: $font-size-h2 - 1rem;
+        }
+
     }
     
     &__subtitle {
@@ -142,6 +148,10 @@
 
         @media (max-width: $screen-md) and (max-height: $screen-sm), (min-width: $screen-md) and (max-height: $screen-sm) {
             max-width: 230px;
+        }
+
+        @media (max-width: 600px) and (max-height: $screen-sm) {
+            max-width: 180px;
         }
         
 
