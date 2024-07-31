@@ -19,3 +19,7 @@ burger();
 
 import { projects} from '../blocks/section-swiper/swiper-projects.js'
 projects();
+
+
+import { contactForm} from '../blocks/contacts/contacts.js'
+contactForm();

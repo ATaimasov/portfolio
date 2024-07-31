@@ -34,6 +34,32 @@ body {
   font-size: $font-size-body;
 }
 
+button {
+  padding: 16px 24px;
+  border-radius: 4px;
+  background: $color-link;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .15);
+  color: $color-burger--open;
+  font-size: $font-size-body;
+  font-weight: 700;
+  transition: $transition-common;
+
+  &:is(:hover, :focus):not(:disabled) {
+    background: $color-link--active;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: $screen-md) {
+        padding: 7px 24px;
+  }
+
+}
+
+
 ::selection {
   background-color: $color-selection;
   color           : $color-main;
@@ -262,11 +288,12 @@ body {
             font-size: $font-size-h2;
             color: $color-link;
             user-select: none;
-
-            &:hover {
-
-            }
         }
+
+    &__link:hover ~ &__pointer {
+          margin-left: 0;
+      }
+
 
 }
 

@@ -12,7 +12,7 @@
     "url": "git+https://github.com/ATaimasov/aboutMe.git"
   },
   "author": "Alexander Taimasov <alexander.taimasov@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ATaimasov/aboutMe/issues"
   },

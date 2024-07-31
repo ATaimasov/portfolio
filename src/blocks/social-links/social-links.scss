@@ -4,7 +4,6 @@
     display        : flex;
     bottom         : 2%;
     left           : 0%;
-    width          : 100%;
     justify-content: center;
     user-select    : none;
 
@@ -13,7 +12,6 @@
         transform: translateY(50%);
         flex-direction: column;
         left: 0.5%;
-        z-index: 0;
     }
 
     @media (max-width: $screen-lg), (max-height: $screen-md) {
@@ -37,8 +35,8 @@
 
 
     &__item {
-        width          : 50px;
-        height         : 50px;
+        width          : $icon-size;
+        height         : $icon-size;
         margin         : 10px;
         box-shadow     : 0 10px 10px rgba(0, 0, 0, 0.1);
         border-radius  : 50%;

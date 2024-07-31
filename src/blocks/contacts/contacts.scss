@@ -1,0 +1,227 @@
+.contacts {
+
+    &__wrapper {
+        grid-template-columns: 36% 50%;
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+
+        @media screen and (max-height: $screen-sm) {
+            margin-top: 0;
+        }
+    }
+
+    &__title-container {
+        @media (max-height: 600px) and (min-width: $screen-sm) {
+            grid-column: span 2;
+        }
+    }
+
+//    &__links-container {
+//     display: grid;
+//     justify-items: center;
+//     align-items: center;
+
+//     @media screen and (max-width: $screen-lg) {
+//         grid-row: 1;
+//         grid-column: span 2;
+//     }
+//    }
+
+   &__links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    transform: none;
+    padding-bottom: 5%;
+    z-index: 1;
+    opacity   : 1;
+
+    &__item {
+        @media screen and (max-width: $screen-xxl) {
+            width : $icon-size - 10px;
+            height: $icon-size - 10px;
+        }
+        @media screen and (max-width: $screen-xl) {
+            width : $icon-size - 15px;
+            height: $icon-size - 15px;
+        }
+    }
+   }
+
+//    &__tooltip {
+//     // right: -21px;
+//    }
+
+   &__text {
+    padding: 2% 2%;
+   }
+
+   &-form__container {
+    grid-column:  span 2;
+    
+   }
+
+   &-form {
+    display: grid;
+    grid-template: 47px 190px 55px / repeat(2, 300px);
+    row-gap: 40px;
+    column-gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 4%;
+
+    @media screen and (max-width: $screen-md) {
+        grid-template: 47px 190px 55px / repeat(2, 200px);
+    }
+
+    @media screen and (max-width: $screen-sm) {
+        grid-template: 40px 150px 40px / repeat(2, 140px);
+    }
+
+    @media screen and (max-height: $screen-sm) {
+        grid-template: 39px 40px 40px / repeat(2, 140px);
+    }
+
+
+   }
+
+   &__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+
+ 
+    &:focus {
+        border: 2px solid black;
+    }
+
+    &._error {
+        border: 2px solid red;
+
+    }
+
+   
+   }
+
+   &__checkbox {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+
+    &._error + .contacts__policy-text:before {
+        box-shadow: 0 0 1px red;
+        border: 1px solid rgba(255, 0, 0, 0.589);
+    }
+
+    // custom checkbox
+    & + .contacts__policy-text:before {
+        content: "" / "empty checkbox";
+        position: absolute;
+        left: -25.4px;
+        width: 17px;
+        height: 17px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid black;
+        border-radius: 6px;
+        transition: $transition-common;
+   }
+
+   &:checked + .contacts__policy-text:after {
+    content: "" / "filled checkbox";
+    position: absolute;
+    left: -21px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 9px;
+    background-color: $color-link--active;
+    border-radius: 50%;
+}
+
+   &:not(:checked):is(:focus-visible) + .contacts__policy-text:after {
+    content: "" / "selected checkbox";
+    position: absolute;
+    left: -21px;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: $color-link--active;
+    opacity: 0.2;
+    
+   }
+   
+}
+
+   &__label {
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    height: 18px;
+    padding: 0 8px;
+    background-color: #fffffffa;
+    font-size: 14px;
+    margin-bottom: 0;
+    border-radius: 15px;
+
+   }
+
+   &__input-form {
+    position: relative;
+   }
+
+   &__textarea {
+    position: relative;
+    grid-column: 1 / 3;
+    
+
+    & textarea {
+        width: 100%;
+        height: 100%;
+        resize: none;
+        padding: 20px;
+
+        &:focus {
+            border: 2px solid black;
+        }
+    }
+
+    
+   }
+
+  
+
+   &__triggers {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+    align-items: center;
+   }
+
+   &__policy {
+    display: flex;
+    align-items: center;
+    
+    input {
+        margin-right: 10px;
+    }
+
+    &-text {
+        font-size: $font-size-footer - 0.2rem;
+        position: relative;
+    }
+
+    &-link {
+        font-size: $font-size-footer - 0.2rem;
+    }
+
+   }
+
+ 
+}
