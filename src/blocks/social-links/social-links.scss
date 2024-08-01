@@ -6,12 +6,14 @@
     left           : 0%;
     justify-content: center;
     user-select    : none;
+    width: 100%;
 
     @media (min-width: $screen-lg) and (min-height: $screen-md) {
         bottom: 50%;
         transform: translateY(50%);
         flex-direction: column;
         left: 0.5%;
+        width: auto;
     }
 
     @media (max-width: $screen-lg), (max-height: $screen-md) {
@@ -47,6 +49,10 @@
         flex-direction : column;
         transition     : all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         position       : relative;
+
+        @media (min-width: $screen-lg) and (min-height: $screen-md) {
+            margin: 15% 10px;
+        }
     }
 
     &__link {

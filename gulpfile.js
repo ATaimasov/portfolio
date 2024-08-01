@@ -9,7 +9,7 @@ global.app = {
 }
 
 import { reset } from "./gulp/tasks/reset.js";
-import { copyImages, copySVG, copyVideos, copyFavicons, copyFonts } from "./gulp/tasks/copy.js";
+import { copyImages, copySVG, copyVideos, copyFavicons, copyFonts, copyMailer } from "./gulp/tasks/copy.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
@@ -28,7 +28,7 @@ function watcher () {
     gulp.watch(path.watch.images, images);
 }
 
-const copy = gulp.parallel(copyImages, copySVG, copyVideos, copyFavicons, copyFonts);
+const copy = gulp.parallel(copyImages, copySVG, copyVideos, copyFavicons, copyFonts, copyMailer);
 
 const mainTasks = gulp.parallel(images, copy, html, scss, js);
 const dev       = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

@@ -8,8 +8,24 @@ export const contactForm = () => {
 
         let error = formValidate(form);
 
-        if (error === 0) {
+        let formData = new FormData(form);
+        console.log(formData)
 
+        if (error === 0) {
+            form.classList.add('_sending');
+            let response = await fetch('phpmailer/sendmail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                form.reset();
+                form.classList.remove('_sending');
+            } else {
+                alert('Ошибка');
+                form.classList.remove('_sending');
+            }
         } else {
             alert('Заполните обязательные поля');
         }

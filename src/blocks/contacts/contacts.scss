@@ -1,7 +1,14 @@
 .contacts {
 
     &__wrapper {
-        grid-template-columns: 36% 50%;
+        grid-template-columns: 40% 40%;
+
+        @media screen and (max-height: $screen-xxl) {
+            grid-template-columns: 45% 45%;
+        }
+        @media screen and (max-height: $screen-xl) {
+            grid-template-columns: 45% 45%;
+        }
     }
 
     &-container {
@@ -15,21 +22,15 @@
     }
 
     &__title-container {
+        text-align: center;
+        padding: 0 10%;
+
         @media (max-height: 600px) and (min-width: $screen-sm) {
             grid-column: span 2;
         }
     }
 
-//    &__links-container {
-//     display: grid;
-//     justify-items: center;
-//     align-items: center;
 
-//     @media screen and (max-width: $screen-lg) {
-//         grid-row: 1;
-//         grid-column: span 2;
-//     }
-//    }
 
    &__links {
     position: static;
@@ -39,22 +40,15 @@
     padding-bottom: 5%;
     z-index: 1;
     opacity   : 1;
+    justify-content: center;
+
+  
 
     &__item {
-        @media screen and (max-width: $screen-xxl) {
-            width : $icon-size - 10px;
-            height: $icon-size - 10px;
-        }
-        @media screen and (max-width: $screen-xl) {
-            width : $icon-size - 15px;
-            height: $icon-size - 15px;
-        }
+        margin: 10% 10px;
+        font-size: 40px;
     }
    }
-
-//    &__tooltip {
-//     // right: -21px;
-//    }
 
    &__text {
     padding: 2% 2%;
@@ -72,7 +66,12 @@
     column-gap: 20px;
     justify-content: space-between;
     padding-bottom: 4%;
+    position: relative;
 
+
+    @media screen and (max-width: $screen-xl) {
+        grid-template: 47px 190px 55px / repeat(2, 270px);
+    }
     @media screen and (max-width: $screen-md) {
         grid-template: 47px 190px 55px / repeat(2, 200px);
     }
@@ -85,6 +84,26 @@
         grid-template: 39px 40px 40px / repeat(2, 140px);
     }
 
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 105%;
+        height: 105%;
+        background: url("/img/loading.gif") center / 80px no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-common;
+        backdrop-filter: blur(5px);
+
+    }
+
+    &._sending::after {
+        opacity: 1;
+        visibility: visible;
+    }
 
    }
 

@@ -1,13 +1,10 @@
 
 // libs
-import {swiperBeforeIt, swiperAfterIt } from './libs/swiper.js'
+
+import {swiperBeforeIt, swiperAfterIt, swiperProjects } from './libs/swiper.js'
   swiperBeforeIt.enable();
   swiperAfterIt.enable();
-
-
-
-// import {fontAwesome} from './libs/font-awesome.js'
-// fontAwesome();
+  swiperProjects.enable();
 
 // basemodules
 import { isWebp } from './base-modules/webpCheck.js';

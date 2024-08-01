@@ -14,6 +14,7 @@ export const path = {
         fonts   : `${buildFolder}/fonts/`,
         videos  : `${buildFolder}/videos/`,
         favicons: `${buildFolder}/img/favicons/`,
+        mailer  : `${buildFolder}/phpmailer/`,
     },
     src: {
         js      : `${srcFolder}/js/app.js`,
@@ -22,8 +23,9 @@ export const path = {
         images  : `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp,avif}`,
         svg     : `${srcFolder}/blocks/**/*.svg`,
         videos  : `${srcFolder}/blocks/**/*.mp4`,
-        fonts  : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
+        fonts   : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
         favicons: `${srcFolder}/favicons/*.*`,
+        mailer  : `${srcFolder}/phpmailer/**/*.*`,
     },
     watch: {
         js      : `${srcFolder}/**/*.js`,
@@ -32,7 +34,7 @@ export const path = {
         images  : `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp,avif}`,
         svg     : `${srcFolder}/blocks/**/*.svg`,
         videos  : `${srcFolder}/blocks/**/*.mp4`,
-        fonts  : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
+        fonts   : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
         favicons: `${srcFolder}/img/favicons/*.*`,
     },
     clean      : buildFolder,

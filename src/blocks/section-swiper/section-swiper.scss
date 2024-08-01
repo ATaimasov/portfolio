@@ -56,11 +56,10 @@
         justify-items        : center;
         align-items          : center;
         width                : 100%;
-        grid-template-rows   : 8% 90% ;
+        grid-template-rows: 15% 90% 60px;
 
-        @media(min-height: $screen-md) {
-            grid-template-rows: 15% 90% 60px;
-        }
+
+     
    
         @media (max-width: $screen-xl) {
             grid-template-columns: 60%;
@@ -69,11 +68,13 @@
 
         @media (max-width: $screen-lg) {
             grid-template-columns: 100%;
+            grid-template-rows: 8% 85% 40px;
         }
 
         @media (max-height: $screen-sm) {
             row-gap: 5px;
-            grid-template-rows   : 8% 90% ;
+            grid-template-rows: 8% 85% 40px;
+
         }
 
         @media (max-width: 600px) and (max-height: $screen-sm) {

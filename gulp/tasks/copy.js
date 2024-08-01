@@ -33,3 +33,8 @@ export const copyFonts = () => {
         .pipe(app.gulp.dest(app.path.build.fonts))
 }
 
+export const copyMailer = () => {
+    return app.gulp.src(app.path.src.mailer, { encoding: false })
+        .pipe(app.gulp.dest(app.path.build.mailer))
+}
+
