@@ -90,14 +90,6 @@
             @media (max-width: $screen-lg), (max-height: $screen-md) {
                 justify-self: center;
                 font-size   : $font-size-header-icon;
-    
-                &--active {
-                    transition: font-size .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-                        // link-name interaction with the icon
-                    .header__link:hover & {
-                        font-size: $font-size-header-icon * 1.1;
-                    }
-                }
             }
 
             @media (max-width: $screen-sm), (max-height: $screen-sm)  {

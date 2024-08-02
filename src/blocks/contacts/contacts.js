@@ -1,6 +1,10 @@
+import { fancyHtml, fancyText } from '../../js/libs/fancybox.js';
+
 export const contactForm = () => { 
     const form = document.getElementById('form');
-
+     
+    // avoid error in console on the other pages
+    if (window.location.href.endsWith('contacts.html')) {
     form.addEventListener('submit', formSend);
 
     async function formSend(e) {
@@ -19,17 +23,20 @@ export const contactForm = () => {
             });
             if (response.ok) {
                 let result = await response.json();
-                alert(result.message);
                 form.reset();
                 form.classList.remove('_sending');
+                fancyHtml(fancyText.successSend);
             } else {
-                alert('Ошибка');
+                fancyHtml(fancyText.errorSend);
                 form.classList.remove('_sending');
             }
         } else {
-            alert('Заполните обязательные поля');
+            fancyHtml(fancyText.requiredFields)
         }
+    }
+
 }
+
 
 
 function formValidate(form) {
@@ -72,5 +79,6 @@ function formRemoveError(input) {
 function emailTest(input) { 
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
+
 
 }

@@ -1,10 +1,10 @@
-  //  poppings
+    //  poppings
  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
   html {
-    font-family    : "Poppins", sans-serif;
-    font-size      : $font-size-html;
-    scroll-behavior: smooth;
+    font-family     : "Poppins", sans-serif;
+    font-size       : $font-size-html;
+    scroll-behavior : smooth;
     scroll-snap-type: y mandatory;
 
     @media (max-width: $screen-xxl) {
@@ -32,23 +32,30 @@
 
 body {
   font-size: $font-size-body;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-
+.popup-text {
+  width: 70%;
+  padding: 30px;
+}
 
 button {
-  padding: 16px 24px;
+  padding      : 16px 24px;
   border-radius: 4px;
-  background: $color-link;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .15);
-  color: $color-burger--open;
-  font-size: $font-size-body;
-  font-weight: 700;
-  transition: $transition-common;
+  background   : $color-link;
+  box-shadow   : 0 4px 4px rgba(0, 0, 0, .15);
+  color        : $color-burger--open;
+  font-size    : $font-size-body;
+  font-weight  : 700;
+  transition   : $transition-common;
 
   &:is(:hover, :focus):not(:disabled) {
     background: $color-link--active;
-    cursor: pointer;
+    cursor    : pointer;
   }
 
   &:disabled {
@@ -76,7 +83,7 @@ button {
   color: $color-link;
 }
 
-  //  :not because we need to restrict influnce of the effect on links into burger-menu
+    //  :not because we need to restrict influnce of the effect on links into burger-menu
 .link--active:not(.header__item.link--active) {
   transition: border 0.5s ease-in;
   position  : relative;
@@ -88,9 +95,9 @@ button {
     }
 }
 
-  // so we separate class for links in navigation which will be able only for size > 992px
+    // so we separate class for links in navigation which will be able only for size > 992px
 .header__list .link--active  {
-  // instead of using js-code with window.innerWidth (etc), we use media with min-width 
+    // instead of using js-code with window.innerWidth (etc), we use media with min-width 
   @media (min-width: $screen-lg) and (min-height: $screen-md) {
     transition: border 0.5s ease-in;
     position  : relative;
@@ -103,16 +110,18 @@ button {
 }
   
 }
-  // despite we duplicating code , eventually we avoid using js code. So it's good for cpu usage 
+    // despite we duplicating code , eventually we avoid using js code. So it's good for cpu usage 
 
 
 .section {
-  height: 100vh;
+  height           : 100vh;
+  height           : 100lvh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
-  position: relative;
-  display: flex;
-  align-items: center;
+  scroll-snap-stop : always;
+  position         : relative;
+  display          : flex;
+  align-items      : center;
+  margin-bottom    : 10%;
 
   &__wrapper {
     display              : grid;
@@ -160,10 +169,6 @@ button {
             max-width    : 350px;
         }
 
-        @media (max-width: $screen-sm) {
-            max-width: 30dvh;
-        }
-
         @media (max-height: 600px) and (min-width: $screen-lg) {
             grid-column: 1;
             grid-row   : 1;
@@ -171,17 +176,18 @@ button {
 
         @media (max-height: 600px) and (min-width: $screen-sm) {
             grid-column: 2;
-            max-width    : 300px;
+            max-width  : 300px;
         }
 
-        @media (min-width: $screen-sm) and (max-height: $screen-sm) {
-          max-width    : 200px;
+        @media (min-width: $screen-sm) and (max-height: $screen-sm),
+        (max-width: $screen-sm)  {
+          max-width: 200px;
       }
 
     }
 
     &__img {
-        max-width: 100%;
+        max-width     : 100%;
         pointer-events: none;
     }
     
@@ -199,7 +205,7 @@ button {
         @media (max-height: 600px) and (min-width: $screen-sm) {
             grid-row   : 1;
             grid-column: span 1;
-            text-align: center;
+            text-align : center;
         }
     }
 
@@ -225,7 +231,7 @@ button {
         }
 
         @media (max-width: $screen-lg) {
-            margin-top : 2%;
+            margin-top: 2%;
         }
     }
 
@@ -234,9 +240,9 @@ button {
         grid-column: 2;
 
         @media (max-width: $screen-lg) {
-            grid-row   : 4;
-            grid-column: span 2;
-            display    : grid;
+            grid-row             : 4;
+            grid-column          : span 2;
+            display              : grid;
             grid-template-columns: 50% 50%;
         }
 
@@ -281,14 +287,14 @@ button {
     }
 
     &__pointer {
-            opacity: 0.9;
-            vertical-align:top;
-            margin-left: 5px;
-            margin-bottom: 5px;
-            transition: $transition-common;
-            font-size: $font-size-h2;
-            color: $color-link;
-            user-select: none;
+            opacity       : 0.9;
+            vertical-align: top;
+            margin-left   : 5px;
+            margin-bottom : 5px;
+            transition    : $transition-common;
+            font-size     : $font-size-h2;
+            color         : $color-link;
+            user-select   : none;
         }
 
     &__link:hover ~ &__pointer {

@@ -3,7 +3,7 @@
     &__img-container {
 
         @media (max-width: $screen-sm) {
-            max-width: 50dvh;
+            max-width: 300px;
         }
 
         @media (max-height: 600px) and (min-width: $screen-sm) {

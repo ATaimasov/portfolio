@@ -1,3 +1,7 @@
+.section:has(.projects__wrapper) {
+    height: 100dvh;
+}
+
 .projects {
 
     &__wrapper {
@@ -58,10 +62,7 @@
         max-height: none;
     }
 
-    // &__img-container:hover + &__info-container,
-    // &__info-container:hover {
-    //     bottom: 0;
-    // }
+
 
     &__info {
         &-container {
@@ -92,14 +93,12 @@
             }
 
             &--opened {
-                bottom: 0;
+                bottom: 12px;
             }
 
         }
 
     }
-
-
 
     &__link {
         padding: 0;
@@ -134,8 +133,6 @@
         grid-area: stack;
 
         &-list {
-            // grid-column: span 2;
-            // grid-row: span 2;
             align-self: baseline;
             
             &:last-child {
@@ -179,6 +176,33 @@
         }
 
     }
-}
 
-// приделать стрелки вместо кнопок, и сделать чтобы нельзя было управлять клавиатурой и колесом мыши 
+
+    &__stack {
+        grid-template-areas: 
+            "header header header"
+            "main-technology libs libs2"
+            "additional additional additional";
+
+            &-main {
+                grid-area: main-technology;
+            }
+
+            &-libs {
+                grid-area: libs;
+            }
+
+            &-libs2 {
+                grid-area: libs2;
+            }
+
+            &-additional {
+                grid-area: additional;
+                &:last-child {
+                    grid-column: span 3;
+                }
+                
+            }
+            
+    }
+}

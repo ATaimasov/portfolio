@@ -1,6 +1,5 @@
 
 // libs
-
 import {swiperBeforeIt, swiperAfterIt, swiperProjects } from './libs/swiper.js'
   swiperBeforeIt.enable();
   swiperAfterIt.enable();
@@ -17,6 +16,11 @@ burger();
 import { projects} from '../blocks/section-swiper/swiper-projects.js'
 projects();
 
-
 import { contactForm} from '../blocks/contacts/contacts.js'
 contactForm();
+
+import { popUpPolicy} from '../blocks/contacts/Policy.js'
+popUpPolicy();
+
+import { videomaking } from '../blocks/videomaking/videomaking.js';
+videomaking();

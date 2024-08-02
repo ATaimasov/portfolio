@@ -34,7 +34,7 @@
         }
 
         @media (max-width: $screen-sm) {
-            max-width: 50dvh;
+            max-width: 300px;
         }
 
         @media (max-height: 600px) and (min-width: $screen-sm) {
@@ -83,7 +83,10 @@
     }
 
     &__title {
-        font-size: $font-size-h3;
+
+        @media (max-width: 600px) and (max-height: $screen-sm) {
+            font-size: $font-size-h3;
+        }
     }
 
     &__text-container {
@@ -106,7 +109,7 @@
         padding: 0 2%;
 
         @media (max-width: 600px) and (max-height: $screen-sm) {
-            font-size: $font-size-text - 0.8rem;
+            font-size: $font-size-text - 0.5rem;
         }
     }
 
