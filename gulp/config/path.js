@@ -22,7 +22,7 @@ export const path = {
         scss    : `${srcFolder}/scss/style.scss`,
         images  : `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp,avif}`,
         svg     : `${srcFolder}/blocks/**/*.svg`,
-        videos  : `${srcFolder}/blocks/**/*.mp4`,
+        videos  : `${srcFolder}/blocks/**/*.{mp4,webm}`,
         fonts   : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
         favicons: `${srcFolder}/favicons/*.*`,
         mailer  : `${srcFolder}/phpmailer/**/*.*`,
@@ -33,7 +33,7 @@ export const path = {
         scss    : `${srcFolder}/**/*.scss`,
         images  : `${srcFolder}/blocks/**/*.{jpg,jpeg,png,gif,webp,avif}`,
         svg     : `${srcFolder}/blocks/**/*.svg`,
-        videos  : `${srcFolder}/blocks/**/*.mp4`,
+        videos  : `${srcFolder}/blocks/**/*.{mp4,webm}`,
         fonts   : `${srcFolder}/fonts/**/*.{woff2,woff,ttf,svg,eot}`,
         favicons: `${srcFolder}/img/favicons/*.*`,
     },
@@ -41,5 +41,6 @@ export const path = {
     buildFolder: buildFolder,
     srcFolder  : srcFolder,
     rootFolder : rootFolder,
-    ftp        : "",
+    ftp        : "www",
+    domain     : `xn--80aag0apnud.xn--p1ai`
 }
