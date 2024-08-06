@@ -18,6 +18,13 @@ export const html = () => {
                 webpHtmlNosvs()
             )
         )
+        // get CSP error with browsersync option serveStaticOptions ['html']. Instead of this use gulp-replace with regex below for deleting '.html' from href
+        .pipe(
+            app.plugins.if(
+                app.isBuild,
+                app.plugins.replace(/href="([^"]*\.html)"/g, (match, p1) => `href="${p1.replace(/\.html$/, '')}"`)
+            )
+        )
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -37,6 +44,7 @@ export const html = () => {
                 })
             )
         )
+      
         .pipe(app.gulp.dest(app.path.build.html))
         .pipe(app.plugins.browserSync.stream());
 }
