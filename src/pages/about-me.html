@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../blocks/head.html', {
+        "title": "Александр Таймасов - Frontend Developer",
+        "ogTitle": "Александр Таймасов - Frontend Developer",
+        "description": "Здесь вы можете ознакомиться с базовой информацией обо мне",
+        "ogDescription": "Здесь вы можете ознакомиться с базовой информацией обо мне",
+        "ogImage": "https://xn--80aag0apnud.xn--p1ai/img/Alexander-Taimasov.png",
+        "ogUrl": "https://xn--80aag0apnud.xn--p1ai/"
+    })
+</head>
+<body >
+    <header>
+        @@include('../blocks/header-nav/header-nav.html', {})
+    </header>
+    <main >
+        @@include('../blocks/intro/intro.html', {})
+        @@include('../blocks/education/education.html', {})
+        @@include('../blocks/interests/interests.html', {})
+        @@include('../blocks/videomaking/videomaking.html', {})
+    </main>
+    <footer>
+        @@include('../blocks/social-links/social-links.html', {})
+    </footer>
+    <script src="../js/app.min.js"></script>
+</body>
+</html>
