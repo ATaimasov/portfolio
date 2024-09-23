@@ -1,17 +1,16 @@
-import { fancyHtml, fancyText } from '../../js/libs/fancybox.js';
+import { fancyHtml, fancyText } from '../modal/modalText.js';
 
 export const contactForm = () => { 
     const form = document.getElementById('form');
      
     // avoid error in console on the other pages
-    if (window.location.href.endsWith('contacts.html')) {
+    if (window.location.href.endsWith('contacts') || window.location.href.endsWith('contacts.html')) {
     form.addEventListener('submit', formSend);
 
     async function formSend(e) {
         e.preventDefault();
 
         let error = formValidate(form);
-
         let formData = new FormData(form);
         console.log(formData)
 
@@ -23,6 +22,7 @@ export const contactForm = () => {
             });
             if (response.ok) {
                 let result = await response.json();
+
                 form.reset();
                 form.classList.remove('_sending');
                 fancyHtml(fancyText.successSend);
@@ -36,8 +36,6 @@ export const contactForm = () => {
     }
 
 }
-
-
 
 function formValidate(form) {
     let error = 0;

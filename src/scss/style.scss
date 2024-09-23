@@ -13,8 +13,6 @@
 @import "./base/common-styles";
 @import "./base/animation";
 
-
-
 // blocks
 
 // index.html
@@ -33,4 +31,7 @@
 
 // contacts
 @import "../blocks/contacts/contacts";
-@import "../blocks/contacts/Policy";
+
+
+// service
+@import "../blocks/modal/_modal";

@@ -9,6 +9,10 @@ import {swiperBeforeIt, swiperAfterIt, swiperProjects } from './libs/swiper.js'
 import { isWebp } from './base-modules/webpCheck.js';
 isWebp();
 
+// Services
+import '../blocks/modal/modal.js'
+
+
 // blocks
 import { burger } from '../blocks/header-nav/header-nav.js';
 burger();
@@ -16,11 +20,10 @@ burger();
 import { projects} from '../blocks/section-swiper/swiper-projects.js'
 projects();
 
-import { contactForm} from '../blocks/contacts/contacts.js'
+import { contactForm} from '../blocks/contacts/form.js'
 contactForm();
 
-import { popUpPolicy} from '../blocks/contacts/Policy.js'
-popUpPolicy();
+
 
 import { videomaking } from '../blocks/videomaking/videomaking.js';
 videomaking();
