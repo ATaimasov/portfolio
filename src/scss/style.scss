@@ -1,6 +1,6 @@
   // диспетчер подключений
 
-// libs
+// vendor
 @import "../../node_modules/swiper/swiper-bundle";
 @import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
 @import "../fonts/fontello/css/icons";
@@ -8,10 +8,10 @@
 
 
 // base
-@import "./base/variables";
-@import "./base/reset.scss";
-@import "./base/common-styles";
-@import "./base/animation";
+@import "./base/_variables";
+@import "./base/_reset.scss";
+@import "./base/_common-styles";
+@import "./base/_animation";
 
 // blocks
 
@@ -35,3 +35,5 @@
 
 // service
 @import "../blocks/modal/_modal";
+
+

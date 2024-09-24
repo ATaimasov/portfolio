@@ -8,6 +8,8 @@
     user-select    : none;
     width: 100%;
 
+    
+
     @media (min-width: $screen-lg) and (min-height: $screen-md) {
         bottom: 50%;
         transform: translateY(50%);
@@ -50,6 +52,8 @@
         transition     : all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         position       : relative;
 
+        
+
         @media (min-width: $screen-lg) and (min-height: $screen-md) {
             margin: 15% 10px;
         }
@@ -57,9 +61,13 @@
 
     &__link {
         color: black;
-        
-       }
 
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__github--active:has(&__link:focus),    
     &__github--active:hover,
     &__github--active:hover &__tooltip,
     &__github--active:hover &__tooltip::before {
@@ -67,6 +75,7 @@
         color     : #ffffff;
     }
 
+    &__linkedin--active:has(&__link:focus),    
     &__linkedin--active:hover,
     &__linkedin--active:hover &__tooltip,
     &__linkedin--active:hover &__tooltip::before {
@@ -74,7 +83,7 @@
         color     : #ffffff;
     }
 
-
+    &__telegram--active:has(&__link:focus),    
     &__telegram--active:hover,
     &__telegram--active:hover &__tooltip,
     &__telegram--active:hover &__tooltip::before {
