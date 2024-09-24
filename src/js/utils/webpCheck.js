@@ -1,5 +1,5 @@
 // Checks if the browser supports WebP images and adds a class to the HTML: webp or no-webp
-export function isWebp() {
+function isWebp() {
     // Function to check WebP support
     function testWebP(callback) {
         let webP = new Image();
@@ -14,3 +14,5 @@ export function isWebp() {
         document.documentElement.classList.add(className);
     });
 }
+
+isWebp()

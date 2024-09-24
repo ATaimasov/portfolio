@@ -1,10 +1,10 @@
 import { fancyHtml, fancyText } from '../modal/modalText.js';
 
-export const contactForm = () => { 
+function contactForm() { 
     const form = document.getElementById('form');
      
     // avoid error in console on the other pages
-    if (window.location.href.endsWith('contacts') || window.location.href.endsWith('contacts.html')) {
+    if (form) {
     form.addEventListener('submit', formSend);
 
     async function formSend(e) {
@@ -81,3 +81,4 @@ function emailTest(input) {
 
 }
 
+contactForm()

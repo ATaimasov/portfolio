@@ -7,9 +7,10 @@ function callModal(event,  text) {
 
  function modalPolicy() {
     
-    if (window.location.href.endsWith('contacts') || window.location.href.endsWith('contacts.html')) {
+   const policy = document.getElementById('policy');
 
-    const policy = document.getElementById('policy');
+    if (policy) {
+
     policy.addEventListener('click', function (event) {
         callModal(event, fancyTextLaw.policy)
     })

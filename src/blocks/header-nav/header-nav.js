@@ -1,7 +1,7 @@
 
 // burger 
 
-export const burger = () => {
+function burgerMenu() {
     
 const burgerButton = document.getElementById('burger-menu');
 const burgerList = document.getElementById('header__list');
@@ -29,3 +29,4 @@ header.dispatchEvent (new Event('click'));
 
 }
 
+burgerMenu()

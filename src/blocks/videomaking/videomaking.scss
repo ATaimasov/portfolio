@@ -2,8 +2,15 @@
     display: none;
 }
 
+.fancybox__content {
+    video {
+        outline: 0;
+    }
+}
+
 
 .videomaking { 
+
 
     @media (max-height: 600px) and (min-width: $screen-sm) {
         grid-template-columns: 40% 30%;
@@ -22,6 +29,7 @@
         @media (max-height: 600px) and (min-width: $screen-sm) {
             grid-column: span 2;
             grid-row: 5;
+            
         }
     }
 

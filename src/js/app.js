@@ -5,25 +5,14 @@ import {swiperBeforeIt, swiperAfterIt, swiperProjects } from './libs/swiper.js'
   swiperAfterIt.enable();
   swiperProjects.enable();
 
-// basemodules
-import { isWebp } from './base-modules/webpCheck.js';
-isWebp();
+// utils
+import './utils/webpCheck.js';
 
 // Services
 import '../blocks/modal/modal.js'
 
-
-// blocks
-import { burger } from '../blocks/header-nav/header-nav.js';
-burger();
-
-import { projects} from '../blocks/section-swiper/swiper-projects.js'
-projects();
-
-import { contactForm} from '../blocks/contacts/form.js'
-contactForm();
-
-
-
-import { videomaking } from '../blocks/videomaking/videomaking.js';
-videomaking();
+// Blocks
+import '../blocks/header-nav/header-nav.js';
+import '../blocks/section-swiper/swiper-projects.js'
+import '../blocks/contacts/form.js';
+import '../blocks/videomaking/videomaking.js';
