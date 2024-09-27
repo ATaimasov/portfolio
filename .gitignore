@@ -1,14 +1,14 @@
 
-archive/
-dist/
+
 ftp.js
 
-.vscode
-build/
 node_modules/
+dist/
+build/
+
+.vscode
 *.log
 .DS_Store
-
 _site/
 tmp/
 out/

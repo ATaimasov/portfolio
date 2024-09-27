@@ -110,6 +110,12 @@
         display: grid;
         grid-template-columns: 75% 25%;
         align-items: center;
+        border: 1px solid;
+
+        h5 {
+            font-weight: 700;
+            text-decoration: solid;
+        }
     }
 
   
@@ -145,9 +151,9 @@
             grid-column: span 2;
             text-align: justify;
 
-            &:last-child {
-                text-align: right;
-            }
+            // &:last-child {
+            //     text-align: right;
+            // }
 
             &:nth-of-type(2):has(+ &:nth-of-type(3)) {
                 text-align: justify;
@@ -163,10 +169,20 @@
 
 
     &__stack {
+
         grid-template-areas: 
             "header header header"
-            "main-technology libs libs2"
+            "main-technology libs libs"
+            "main-technology libs libs"
             "additional additional additional";
+
+           
+                li:first-child {
+                    font-weight: 700;
+                    padding-bottom: 1%;
+                }
+        
+            
 
             &-main {
                 grid-area: main-technology;
@@ -176,11 +192,11 @@
                 grid-area: libs;
             }
 
-            &-libs2 {
-                grid-area: libs2;
-            }
-
             &-additional {
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 5%;
+               
                 grid-area: additional;
                 &:last-child {
                     grid-column: span 3;

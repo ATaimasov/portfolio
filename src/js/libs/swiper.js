@@ -53,7 +53,6 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
     invert: false,
     sensitivity: 1,
   },
-  
   pagination: {
     el: ".swiper-pagination__projects",
     clickable: true,

@@ -1,9 +1,10 @@
 
+// generate HTML
+import '../blocks/section-swiper/generateProjects.js';
+
 // libs
-import {swiperBeforeIt, swiperAfterIt, swiperProjects } from './libs/swiper.js'
-  swiperBeforeIt.enable();
-  swiperAfterIt.enable();
-  swiperProjects.enable();
+import './libs/swiper.js'
+
 
 // utils
 import './utils/webpCheck.js';
