@@ -1,4 +1,5 @@
 import {projectsInfo, stackLinks } from "./projects.js"
+
 let projects = projectsInfo.reverse(); // don't touch 
 
 
@@ -23,6 +24,9 @@ function generateStackLinks(libs, additional) {
 }
 
 
+        export  let allProjects = '';
+        export   let  ownProjects = ''; 
+        export   let  studyProjects = '';
 
 
 // HTML-Template for Portfolio
@@ -42,7 +46,7 @@ function portfolioTemplate({
     generateStackLinks(stack.libs, stack.additional)
 
     const mainPage = `
-        <div class="swiper-slide project ${type}">
+        <div class="swiper-slide project" data-category="${type}">
                     <div class="section-swiper__img-container project__img-container">
                         <img src="${img}" alt="${title}"
                             class="section__img section-swiper__img project__img">
@@ -74,7 +78,7 @@ function portfolioTemplate({
                 `
 
     const infoPage = `
-                    <div class="project__info-container ">
+                    <div class="project__info-container project__description">
                         <div class="project__header-container">
                             <h5 class="section__text project__header">
                                 Описание
@@ -85,7 +89,7 @@ function portfolioTemplate({
                             ${description}
                         </p>
                         ${subDescription ? 
-                        `<p class="section__text project__description-text">
+                        `<p class="section__text project__description-subtext">
                             ${subDescription}
                         </p>` : ''
                         }
@@ -166,11 +170,10 @@ function generatePortfolio(projects) {
 
     if(projectsList) {
 
-        let allProjects = '', 
-            ownProjects = '', 
-            studyProjects = '';
+      
 
         projects.forEach((project) => {
+
     
             if(project.type === 'own') {
                 const el = portfolioTemplate(project);
@@ -189,6 +192,14 @@ function generatePortfolio(projects) {
         })
       
         projectsList.insertAdjacentHTML("afterbegin", allProjects)
+
+        generateMyProjects = projectsList.innerHTML = ownProjects
+        generateStudyProjects = projectsList.innerHTML = studyProjects
+        generateAllProjects = projectsList.innerHTML = allProjects
+
+
+     
+       
 
     }
     

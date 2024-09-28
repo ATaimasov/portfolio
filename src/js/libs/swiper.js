@@ -42,18 +42,14 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
 
   });
 
-  export const swiperProjects = new Swiper('.swiper-projects', {
+  export let swiperProjects = new Swiper('.swiper-projects', {
     modules: [Pagination, EffectFade, Mousewheel, Autoplay, Keyboard],
     grabCursor: false,
     simulateTouch: false,
     speed: 1000,
     effect: 'fade',
     loop: true,
-    mousewheel: {
-    invert: false,
-    sensitivity: 1,
-  },
-  pagination: {
+    pagination: {
     el: ".swiper-pagination__projects",
     clickable: true,
   },
@@ -67,4 +63,53 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
 
   });
 
+  export let swiperMyProjects = new Swiper('.swiper-my-projects', {
+    modules: [Pagination, EffectFade, Mousewheel, Autoplay, Keyboard],
+    grabCursor: false,
+    simulateTouch: false,
+    speed: 1000,
+    effect: 'fade',
+    loop: true,
+    pagination: {
+    el: ".swiper-pagination__my-projects",
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true,
+  },
+
+  });
   
+  
+  export function reinitializeSlider() {
+    if (swiperProjects) {
+      swiperProjects.destroy();
+    }
+    swiperProjects = new Swiper('.swiper-projects', {
+      modules: [Pagination, EffectFade, Mousewheel, Autoplay, Keyboard],
+      grabCursor: false,
+      simulateTouch: false,
+      speed: 1000,
+      effect: 'fade',
+      loop: true,
+      pagination: {
+      el: ".swiper-pagination__projects",
+      clickable: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+  
+    });
+
+  }
+
+ 

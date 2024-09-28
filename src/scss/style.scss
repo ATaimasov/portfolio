@@ -10,10 +10,94 @@
 // base
 @import "./base/_variables";
 @import "./base/_reset.scss";
-@import "./base/_common-styles";
 @import "./base/_animation";
 
+
+html {
+  font-family     : "Poppins", "Roboto", sans-serif;
+  font-size       : $font-size-html;
+  scroll-behavior : smooth;
+  scroll-snap-type: y mandatory;
+
+  @media (max-width: $screen-xxl) {
+    font-size: $font-size-html - 5%;
+  }
+
+  @media (max-width: $screen-xl) {
+    font-size: $font-size-html - 12.5%;
+  }
+
+  @media (max-width: $screen-lg) {
+    font-size: $font-size-html - 14%;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: $font-size-html - 18%;
+  }
+
+  @media (max-width: $screen-sm), (max-height: 600px) and (min-width: 480px)  {
+    font-size: $font-size-html - 25.5%;
+  }
+
+  
+}
+
+body {
+font-size: $font-size-body;
+
+&::-webkit-scrollbar {
+  display: none;
+}
+}
+
+::selection {
+background-color: $color-selection;
+color           : $color-main;
+}
+
+:is(:link, :visited)::selection  {
+color: $color-secondary;
+}
+
+
+:is(:is(:link, :visited):hover)::selection  {
+color: $color-link;
+}
+
+  //  :not because we need to restrict influnce of the effect on links into burger-menu
+.link--active:not(.header__item.link--active) {
+transition: border 0.5s ease-in;
+position  : relative;
+border    : 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $color-main;
+    color        : $color-link--active;
+  }
+}
+
+  // so we separate class for links in navigation which will be able only for size > 992px
+.header__list .link--active  {
+  // instead of using js-code with window.innerWidth (etc), we use media with min-width 
+@media (min-width: $screen-lg) and (min-height: $screen-md) {
+  transition: border 0.5s ease-in;
+  position  : relative;
+  border    : 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid $color-main;
+      color        : $color-link--active;
+    }
+}
+
+}
+  // despite we duplicating code , eventually we avoid using js code. So it's good for cpu usage 
+
+
+
 // blocks
+@import "./modules/_section";
+@import "./modules/_button";
 
 // index.html
 @import "../blocks/header-nav/header-nav";
@@ -27,7 +111,7 @@
 @import "../blocks/section-swiper/section-swiper";
 
 // projects
-@import "../blocks/section-swiper/projects-swiper";
+@import "../blocks/section-swiper/projects/projects-swiper";
 
 // contacts
 @import "../blocks/contacts/contacts";

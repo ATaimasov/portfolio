@@ -1,6 +1,6 @@
 
 // generate HTML
-import '../blocks/section-swiper/generateProjects.js';
+import '../blocks/section-swiper/projects/generateProjects.js';
 
 // libs
 import './libs/swiper.js'
@@ -14,6 +14,7 @@ import '../blocks/modal/modal.js'
 
 // Blocks
 import '../blocks/header-nav/header-nav.js';
-import '../blocks/section-swiper/swiper-projects.js'
+import '../blocks/section-swiper/projects/filterProjects.js';
+import '../blocks/section-swiper/projects/swiper-projects.js'
 import '../blocks/contacts/form.js';
 import '../blocks/videomaking/videomaking.js';

@@ -1,0 +1,24 @@
+button {
+    padding      : 16px 24px;
+    border-radius: 4px;
+    background   : $color-link;
+    box-shadow   : 0 4px 4px rgba(0, 0, 0, .15);
+    color        : $color-burger--open;
+    font-size    : $font-size-body;
+    font-weight  : 700;
+    transition   : $transition-common;
+  
+    &:is(:hover, :focus-visible):not(:disabled) {
+      background: $color-link--active;
+      cursor    : pointer;
+    }
+  
+    &:disabled {
+      opacity: 0.5;
+    }
+  
+    @media screen and (max-width: $screen-md) {
+          padding: 7px 24px;
+    }
+  
+  }
