@@ -1,7 +1,6 @@
 import {projectsInfo, stackLinks } from "./projects.js"
 
-let projects = projectsInfo.reverse(); // don't touch 
-
+let projects = projectsInfo;
 
 const libsLinksKeys = Object.keys(stackLinks.libsLinks).sort();
 const additionalLinksKeys = Object.keys(stackLinks.additionalLinks).sort();
@@ -23,12 +22,6 @@ function generateStackLinks(libs, additional) {
     CoincidenceAdditionalLinksInProject = CoincidenceAdditionalNames.map(key => stackLinks.additionalLinks[key])
 }
 
-
-        export  let allProjects = '';
-        export   let  ownProjects = ''; 
-        export   let  studyProjects = '';
-
-
 // HTML-Template for Portfolio
 function portfolioTemplate({
     type,
@@ -46,7 +39,7 @@ function portfolioTemplate({
     generateStackLinks(stack.libs, stack.additional)
 
     const mainPage = `
-        <div class="swiper-slide project" data-category="${type}">
+        <div class="swiper-slide project" data-filter="${type}">
                     <div class="section-swiper__img-container project__img-container">
                         <img src="${img}" alt="${title}"
                             class="section__img section-swiper__img project__img">
@@ -164,43 +157,15 @@ function portfolioTemplate({
 }
 
 const projectsList = document.querySelector('.projects')
+console.log(projectsList)
 
 // Generate Portfolio
 function generatePortfolio(projects) {
 
     if(projectsList) {
 
-      
-
-        projects.forEach((project) => {
-
-    
-            if(project.type === 'own') {
-                const el = portfolioTemplate(project);
-                ownProjects += el;
-
-                allProjects += el;
-            }
-    
-            if(project.type === 'study') {
-                const el = portfolioTemplate(project);
-                studyProjects += el;
-
-                allProjects += el;
-            }
-
-        })
-      
-        projectsList.insertAdjacentHTML("afterbegin", allProjects)
-
-        generateMyProjects = projectsList.innerHTML = ownProjects
-        generateStudyProjects = projectsList.innerHTML = studyProjects
-        generateAllProjects = projectsList.innerHTML = allProjects
-
-
-     
-       
-
+        projects.forEach(project => 
+            projectsList.insertAdjacentHTML("afterbegin", portfolioTemplate(project)))
     }
     
 } 

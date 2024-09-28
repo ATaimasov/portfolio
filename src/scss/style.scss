@@ -93,7 +93,9 @@ border    : 1px solid transparent;
 }
   // despite we duplicating code , eventually we avoid using js code. So it's good for cpu usage 
 
-
+.non-swiper-slide {
+  display: none !important;
+}
 
 // blocks
 @import "./modules/_section";

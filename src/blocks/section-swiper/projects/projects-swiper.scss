@@ -6,15 +6,15 @@
 
     &__wrapper {
         row-gap: 20px;
-        grid-template-columns: 40%;
+        grid-template-columns: 50%;
         grid-template-rows: 90% 10%;
 
         @media (max-width:$screen-xxl) {
-            grid-template-columns: 50%;
+            grid-template-columns: 70%;
         }
         
         @media (max-width:$screen-xl) {
-            grid-template-columns: 45%;
+            grid-template-columns: 80%;
         }
 
         @media (max-width:$screen-lg) {
@@ -55,11 +55,25 @@
             padding: 2px;
             background: transparent;
             transition: $transition-common;
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
+
+            @media screen and (max-width: $screen-xl) {
+                width: 87px;
+                height: 25px;
+            }
+            @media screen and (max-width: $screen-sm) {
+                font-size: 2rem;
+                width: 77px;
+                height: 22px;
+            }
+
+            
         }
 
         button.projects__navigation-button--active {
             background: $color-selection;
             outline: none;
+            
         }
     }
 }

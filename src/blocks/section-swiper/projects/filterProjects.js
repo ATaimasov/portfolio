@@ -1,7 +1,4 @@
-import {swiperProjects, reinitializeSlider} from '../../../js/libs/swiper.js'
-import {allProjects, ownProjects, studyProjects} from './generateProjects.js'
-
-const projs = document.getElementById('projects');
+import { reinitializeSlider} from '../../../js/libs/swiper.js'
 
 const projectFilterButtons = document.querySelectorAll('.projects__navigation-button');
 
@@ -10,82 +7,55 @@ if(projectFilterButtons) {
     function filterButtonsInteraction() {
 
         projectFilterButtons.forEach(button => {
+
             button.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter').toLowerCase();
+                const filter = this.getAttribute('data-category').toLowerCase();
                 
-                if(button.classList.contains('projects__navigation-button--active')) {
-                    button.classList.remove('projects__navigation-button--active');
+                projectFilterButtons.forEach(span => span.classList.remove("'projects__navigation-button--active'"));
+                this.classList.add("'projects__navigation-button--active'");
+
+                const dataFilterElements = document.querySelectorAll("[data-filter]");
+                const menus = document.querySelectorAll(".project__info-container");
+                
+                if (filter === "all") {
+                    dataFilterElements.forEach(element => {
+                        element.classList.remove("non-swiper-slide");
+                        element.classList.add("swiper-slide");
+                        element.style.display = "block";
+                        
+                    });
+
                 } else {
-                    projectFilterButtons.forEach(btn => btn.classList.remove('projects__navigation-button--active'));
-                    button.classList.add('projects__navigation-button--active');
+                    const swiperSlides = document.querySelectorAll(".swiper-slide");
+                    swiperSlides.forEach(slide => {
+                        if (!slide.getAttribute("data-filter") || slide.getAttribute("data-filter") !== filter) {
+                            slide.classList.add("non-swiper-slide");
+                            slide.classList.remove("swiper-slide");
+                            slide.style.display = "none";
+                        }
+                    });
+
+                    dataFilterElements.forEach(element => {
+                        if (element.getAttribute("data-filter") === filter) {
+                            element.classList.remove("non-swiper-slide");
+                            element.classList.add("swiper-slide");
+                            element.style.display = "block";
+                            element.removeAttribute("style"); // Remove inline styles
+                        }
+                    });
+
                 }
-    
-                filterSlides(filter);
-                
+
+                menus.forEach(menu => menu.classList.remove("project__info-container--opened"));
+
+                reinitializeSlider()
+
             });
         })
     }
     
     filterButtonsInteraction()
 
-
-    // function filterSlides(filter) {
-
-        // if (filter === 'all') {
-        //     // Show all slides
-        //     document.querySelectorAll('.swiper-slide').forEach(slide => {
-        //         slide.classList.remove('non-swiper-slide');
-        //         slide.style.display = 'block'; // Show the slide
-        //     });
-        // } else {
-        //     // Hide slides that do not match the filter
-        //     document.querySelectorAll('.swiper-slide').forEach(slide => {
-        //         if (!slide.getAttribute('data-filter') === filter) {
-        //             slide.classList.add('non-swiper-slide');
-        //             slide.style.display = 'none'; // Hide the slide
-        //         } else {
-        //             slide.classList.remove('non-swiper-slide');
-        //             slide.style.display = 'block'; // Show the slide
-        //         }
-        //     });
-        // }     
-  
-// }
-
-function filterSlides(filter) {
-    const slides = document.querySelectorAll('.swiper-slide');
-    
-    slides.forEach((slide) => {
-       let category = slide.getAttribute('data-category')
-
-       if (filter === 'own' && category === 'own') {
-
-            // button own
-
-            projs.innerHTML = ownProjects
-            // updateSlides(slide)
-            // generateStudyProjects()
-
-       } else if (category === 'study' && filter === 'study') {
-
-            // button own
-
-            // updateSlides(slide)
-            // generateMyProjects()
-       }
-    });
-
-        // Destroy and reinitialize Swiper
-        reinitializeSlider();
 }
 
 
-        // function updateSlides(slide) {
-        //     if(slide.style.display = 'none') {
-        //         slide.style.display = 'block';
-        //     } else {
-        //         slide.style.display = 'none';
-        //     }
-        //     swiperProjects.update();
-        // }
-}

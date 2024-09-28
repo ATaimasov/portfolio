@@ -15,6 +15,6 @@ import '../blocks/modal/modal.js'
 // Blocks
 import '../blocks/header-nav/header-nav.js';
 import '../blocks/section-swiper/projects/filterProjects.js';
-import '../blocks/section-swiper/projects/swiper-projects.js'
+import '../blocks/section-swiper/projects/projectsInteraction.js';
 import '../blocks/contacts/form.js';
 import '../blocks/videomaking/videomaking.js';
