@@ -33,7 +33,8 @@ function portfolioTemplate({
     linkGithub,
     linkServer,
     figma, // optional
-    youtube //optional
+    youtube, //optional
+    originalRepository // optional
 }) {
 
     generateStackLinks(stack.libs, stack.additional)
@@ -86,9 +87,11 @@ function portfolioTemplate({
                             ${subDescription}
                         </p>` : ''
                         }
-                        ${ (figma || youtube) ?
+                        ${ (figma || youtube || originalRepository) ?
 
-                        `<p class="section__text project__description-text project__description-study">
+                        `
+                        <p class="section__text project__description-text project__description-study">
+                        <b>Учебные ресурсы</b>
                         ${figma ?
                             `<a href="${figma}" target="_blank"
                             class="section__link link--active">Макет</a>
@@ -97,6 +100,11 @@ function portfolioTemplate({
                         ${youtube ?
                             `<a href="${youtube}" target="_blank"
                             class="section__link link--active">Youtube</a>
+                            ` : ''
+                        }
+                        ${originalRepository ?
+                            `<a href="${originalRepository}" target="_blank"
+                            class="section__link link--active">Github</a>
                             ` : ''
                         }
                         </p>`
@@ -138,6 +146,7 @@ function portfolioTemplate({
                             }
                         </ul>
                         <ul class="section__text project__stack-list project__stack-additional"> 
+                            ${stack.additional.length !== 0 ? '<li>Дополнительно</li>' : ''}
                              ${stack.additional
                                 .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
                                 .map((item, index) => 

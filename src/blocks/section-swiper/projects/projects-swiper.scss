@@ -227,7 +227,7 @@
         &-subtext {
             grid-area: sub-description;
             text-align: justify;
-            font-size: 2.2rem;
+            // font-size: 2.2rem;
         }
        
         &-text {
@@ -236,6 +236,7 @@
         }
 
         &-study {
+            border-top: 1px solid;
             display: flex;
             justify-content: space-between;
             grid-area: additional;
@@ -274,6 +275,7 @@
                 display: flex;
                 justify-content: space-around;
                 padding-bottom: 5%;
+                border-top: 1px solid;
                
                 grid-area: additional;
                 &:last-child {
