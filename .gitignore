@@ -16,3 +16,5 @@ yarn.lock
 .env
 .obsidian
 # package-lock.json
+
+gulp/version.json
