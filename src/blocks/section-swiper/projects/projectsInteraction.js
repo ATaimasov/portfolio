@@ -7,6 +7,16 @@ function projectsInteraction() {
 
     if(project.length > 0) {
 
+        const projectsRightArrow = document.getElementById('projects-right-arrow');
+        const projectsLeftArrow = document.getElementById('projects-left-arrow'); 
+
+        projectsRightArrow.addEventListener('click', function() {
+            swiperProjects.slideNext();
+        })
+        projectsLeftArrow.addEventListener('click', function() {
+            swiperProjects.slidePrev();
+        })
+
         function wheelSlider() {
 
             window.addEventListener('wheel', function(e) {

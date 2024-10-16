@@ -89,7 +89,32 @@ export const projectsInfo = [
         youtube   : 'https://www.youtube.com/watch?v=gUsBaB5ViAo&list=PL4cUxeGkcC9hfoy8vFQ5tbXO3vY0xhhUZ',
         originalRepository: 'https://github.com/johnkomarnicki/net_ninja_vue_3_weather_app'
     },
+    {
+        id            : 6,
+        type          : 'own',
+        img           : '../img/todo-app.png',
+        title         : 'ToDo-List',
+        description   : `Задачи/заметки можно добавлять, редактировать, удалять, отмечать выполненными.`,
+        subDescription: 'Они сохраняются в localStorage',
+        stack         : {
+            main      : ['Vue', 'Pinia', 'CSS'],
+            libs      : [],
+            additional: ['uid']
+        },
+        linkGithub: 'https://github.com/ATaimasov/ToDo',
+        linkServer: 'https://todo.xn--80aag0apnud.xn--p1ai/',
+        figma     : '',
+        youtube   : '',
+        originalRepository: ''
+    },
+
 ]
+
+
+// mutating array to make fresh projects have ascending order
+projectsInfo.forEach((project, index) => {
+    project.id = projectsInfo.length - index;
+})
 
 
   // don't use capital letters
@@ -109,7 +134,8 @@ export const stackLinks = {
         webpack  : 'https://webpack.js.org/',
         bem      : 'https://ru.bem.info/methodology/',
         vite     : 'https://vitejs.dev/',
-        axios    : 'https://axios-http.com/ru/'
+        axios    : 'https://axios-http.com/ru/',
+        uid      : 'https://www.npmjs.com/package/uid'
     }
     
     

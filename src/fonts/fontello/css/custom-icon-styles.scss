@@ -8,6 +8,17 @@
         margin-right: .55em;
         font-size: 0.80em;
     }
+
+    &-angle-left,
+    &-angle-right {
+
+        &.section__text {
+            font-size: 3rem;
+
+        }
+    }
+
+    
 }
 
 

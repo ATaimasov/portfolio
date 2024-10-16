@@ -23,7 +23,8 @@ function generateStackLinks(libs, additional) {
 }
 
 // HTML-Template for Portfolio
-function portfolioTemplate({
+ function portfolioTemplate({
+    id,
     type,
     img,
     title,
@@ -40,10 +41,10 @@ function portfolioTemplate({
     generateStackLinks(stack.libs, stack.additional)
 
     const mainPage = `
-        <div class="swiper-slide project" data-filter="${type}">
+        <div class="swiper-slide project" data-slide-category="${type}" data-hash="project${id}">
                     <div class="section-swiper__img-container project__img-container">
                         <img src="${img}" alt="${title}"
-                            class="section__img section-swiper__img project__img">
+                            class="project__img">
                     </div>
                     <div class="project__info-container">
                         <div class="project__header-container">

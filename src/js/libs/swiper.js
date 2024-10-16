@@ -45,44 +45,19 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
   export let swiperProjects = new Swiper('.swiper-projects', {
     modules: [Pagination, EffectFade, Mousewheel, Autoplay, Keyboard],
     grabCursor: false,
-    simulateTouch: false,
-    speed: 1000,
+    simulateTouch: true,
+    speed: 500,
     effect: 'fade',
     loop: true,
-    breakpoints: {
-      992: {
-        simulateTouch: true
-      }
-    },
     pagination: {
     el: ".swiper-pagination__projects",
+    type: "fraction",
     clickable: true,
-  },
-  keyboard: {
-    enabled: true,
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: true,
-  },
-
-  });
-
-  export function reinitializeSlider() {
-    if (swiperProjects) {
-      swiperProjects.destroy();
-    }
-    swiperProjects = new Swiper('.swiper-projects', {
-      modules: [Pagination, EffectFade, Mousewheel, Autoplay, Keyboard],
-      grabCursor: false,
-      simulateTouch: false,
-
-      speed: 1000,
-      effect: 'fade',
-      loop: true,
-      pagination: {
-      el: ".swiper-pagination__projects",
-      clickable: true,
+    },
+    breakpoints: {
+      992: {
+        simulateTouch: false,
+      }, 
     },
     keyboard: {
       enabled: true,
@@ -91,7 +66,33 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
       delay: 2500,
       disableOnInteraction: true,
     },
-  
+
+  });
+
+  export function reinitializeSlider() {
+    if (swiperProjects) {
+      swiperProjects.destroy();
+    }
+    swiperProjects = new Swiper('.swiper-projects', {
+    modules: [Pagination, EffectFade, Mousewheel, Autoplay, Keyboard],
+    grabCursor: false,
+    simulateTouch: true,
+    speed: 500,
+    effect: 'fade',
+    loop: true,
+    pagination: {
+    el: ".swiper-pagination__projects",
+    type: "fraction",
+    clickable: true,
+    },
+    breakpoints: {
+      992: {
+        simulateTouch: false,
+      },
+    },
+    keyboard: {
+      enabled: true,
+    },
     });
 
   }
