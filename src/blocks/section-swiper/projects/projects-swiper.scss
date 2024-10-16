@@ -123,13 +123,13 @@
     &__info {
         &-container {
             position: absolute;
-            transform: translateY(125%);
+            bottom: -125%;
             width: 100%;
             height: 100%;
             display: grid;
             background: rgba(255,255,255,.80);
             backdrop-filter: blur(10px);
-            transition: transform .3s ease;
+            transition: bottom .3s ease;
             align-items: center;
             cursor: default;
             grid-template-rows: repeat(3, 1fr);
@@ -139,7 +139,7 @@
             "server github";
 
             &--opened {
-                transform: translateY(0);
+                bottom: 0;
             }
 
         }
