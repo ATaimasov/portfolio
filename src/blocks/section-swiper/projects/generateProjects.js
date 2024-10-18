@@ -101,7 +101,7 @@ function generateStackLinks(libs, additional, main) {
 
                         `
                         <p class="section__text project__description-text project__description-study">
-                        <b>Учебные ресурсы</b>
+                        <b class="project__description-study-title">Учебные ресурсы</b>
                         ${figma ?
                             `<a href="${figma}" target="_blank"
                             class="section__link link--active">Макет</a>
@@ -167,7 +167,7 @@ function generateStackLinks(libs, additional, main) {
                             ${stack.libs.length >= 5 ? '</div>' : ''}
                         </ul>
                         <ul class="section__text project__stack-list project__stack-additional"> 
-                            ${stack.additional.length !== 0 ? '<li>Дополнительно</li>' : ''}
+                            ${stack.additional.length !== 0 ? '<li>Дополнительное</li>' : ''}
                              ${stack.additional
                                 .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
                                 .map((item, index) => 
