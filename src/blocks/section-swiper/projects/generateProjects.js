@@ -2,25 +2,34 @@ import {projectsInfo, stackLinks } from "./projects.js"
 
 let projects = projectsInfo;
 
-const libsLinksKeys = Object.keys(stackLinks.libsLinks).sort();
+// get sorted keys of links
+const libsLinksKeys       = Object.keys(stackLinks.libsLinks).sort();
 const additionalLinksKeys = Object.keys(stackLinks.additionalLinks).sort();
+const baseLinksKeys       = Object.keys(stackLinks.baseLinks).sort();
 
 let CoincidenceLinksInProject;
 let CoincidenceAdditionalLinksInProject;
+let CoincidenceBaseLinksInProject;
 
-function generateStackLinks(libs, additional) {
+function generateStackLinks(libs, additional, main) {
 
-    // find Coincidence between stack.libs and stackLinks.libsLinks
-    const libsList = libs.map(key => key.toLowerCase()).sort();
-    const CoincidenceLibsNames = libsLinksKeys.filter(lib => libsList.includes(lib))
-    // list of links from stackLinks for each project
-    CoincidenceLinksInProject = CoincidenceLibsNames.map(key => stackLinks.libsLinks[key])
-
+    // get sorted of each stack lists type keys (it will be used to coincidence with sorted links from stackLinks)
+    const libsList       = libs.map(key => key.toLowerCase()).sort();
     const additionalList = additional.map(key => key.toLowerCase()).sort();
+    const baseList       = main.map(key => key.toLowerCase()).sort();
+
+      // find Coincidences between links and stack lists
+    const CoincidenceLibsNames       = libsLinksKeys.filter(lib => libsList.includes(lib))
     const CoincidenceAdditionalNames = additionalLinksKeys.filter(elem => additionalList.includes(elem))
-    // list of additional from stackLinks for each project
+    const CoincidenceBaseNames       = baseLinksKeys.filter(elem => baseList.includes(elem))
+
+      // lists of links according to list of stack 
+    CoincidenceLinksInProject           = CoincidenceLibsNames.map(key => stackLinks.libsLinks[key])
     CoincidenceAdditionalLinksInProject = CoincidenceAdditionalNames.map(key => stackLinks.additionalLinks[key])
+    CoincidenceBaseLinksInProject       = CoincidenceBaseNames.map(key => stackLinks.baseLinks[key])
+
 }
+
 
 // HTML-Template for Portfolio
  function portfolioTemplate({
@@ -38,7 +47,7 @@ function generateStackLinks(libs, additional) {
     originalRepository // optional
 }) {
 
-    generateStackLinks(stack.libs, stack.additional)
+    generateStackLinks(stack.libs, stack.additional, stack.main);
 
     const mainPage = `
         <div class="swiper-slide project" data-slide-category="${type}" data-hash="project${id}">
@@ -127,12 +136,21 @@ function generateStackLinks(libs, additional) {
                         <ul class="section__text project__stack-list project__stack-main">
                             <li>База</li>
                             ${stack.main
-                                .map((item) => `<li>${item}</li>`)
+                                .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+                                .map((item, index) => 
+                                    `<li>
+                                        <a href="${CoincidenceBaseLinksInProject[index]}" class="section__link link--active" target="_blank">
+                                        ${item}
+                                        </a>
+                                    </li>`
+                                )
                                 .join('')
                             }
                         </ul>
                         <ul class="section__text project__stack-list project__stack-libs">
                             ${stack.libs.length !== 0 ? '<li>Библиотеки</li>' : ''}
+
+                            ${stack.libs.length >= 5 ? '<div class="project__stack-libs--grid">' : ''} 
 
                             ${stack.libs
                                 .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
@@ -145,6 +163,8 @@ function generateStackLinks(libs, additional) {
                                 )
                                 .join('')
                             }
+
+                            ${stack.libs.length >= 5 ? '</div>' : ''}
                         </ul>
                         <ul class="section__text project__stack-list project__stack-additional"> 
                             ${stack.additional.length !== 0 ? '<li>Дополнительно</li>' : ''}

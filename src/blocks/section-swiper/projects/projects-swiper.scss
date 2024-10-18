@@ -132,7 +132,7 @@
             transition: bottom .3s ease;
             align-items: center;
             cursor: default;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: 25% 37.5% 37.5%;
             grid-template-areas: 
             "header header"
             "stack description"
@@ -215,7 +215,7 @@
         "sub-description sub-description sub-description"
         "additional additional additional";
 
-        grid-template-rows: 33.3% 23.85% 23.85% 19%;
+        grid-template-rows: 25% 25% 25% 25%;
         
         row-gap: 1%;
        
@@ -247,17 +247,20 @@
 
     &__stack {
 
+        & ul li:first-child {
+            padding-bottom: 5px;
+        }
+
         grid-template-areas: 
             "header header header"
             "main-technology libs libs"
             "main-technology libs libs"
             "additional additional additional";
 
-            grid-template-rows: 33.3% 24.85% 24.85% 17%;
+            grid-template-rows: 25% 25% 25% 25%;
            
                 li:first-child {
                     font-weight: 700;
-                    padding-bottom: 1%;
                 }
         
             
@@ -268,13 +271,23 @@
 
             &-libs {
                 grid-area: libs;
+
+                &--grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 50%); 
+
+                    & li:last-child {
+                        grid-column: span 2;
+                    }
+                    // if there are more than 4 libs it will use grid template to separate them
+                }
             }
 
             &-additional {
                 display: flex;
                 justify-content: space-around;
-                padding-bottom: 5%;
                 border-top: 1px solid;
+                align-self: center;
                
                 grid-area: additional;
                 &:last-child {
