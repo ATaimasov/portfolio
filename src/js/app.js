@@ -1,6 +1,6 @@
 
 // generate HTML
-import '../blocks/section-swiper/projects/generateProjects.js';
+import '../blocks/section-swiper/projects/generating/generateProjects.js';
 
 // libs
 import './libs/swiper.js'

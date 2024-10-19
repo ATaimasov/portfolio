@@ -235,15 +235,14 @@
         }
 
         &-study {
-
-          &-title {
-            font-weight: 700;
-          }
-
             border-top: 1px solid;
             display: flex;
             justify-content: space-evenly;
             grid-area: additional;
+
+            &-title {
+                font-weight: 700;
+              }
         }
 
     }

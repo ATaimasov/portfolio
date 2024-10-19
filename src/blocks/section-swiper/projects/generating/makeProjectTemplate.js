@@ -1,38 +1,7 @@
-import {projectsInfo, stackLinks } from "./projects.js"
-
-let projects = projectsInfo;
-
-// get sorted keys of links
-const libsLinksKeys       = Object.keys(stackLinks.libsLinks).sort();
-const additionalLinksKeys = Object.keys(stackLinks.additionalLinks).sort();
-const baseLinksKeys       = Object.keys(stackLinks.baseLinks).sort();
-
-let CoincidenceLinksInProject;
-let CoincidenceAdditionalLinksInProject;
-let CoincidenceBaseLinksInProject;
-
-function generateStackLinks(libs, additional, main) {
-
-    // get sorted of each stack lists type keys (it will be used to coincidence with sorted links from stackLinks)
-    const libsList       = libs.map(key => key.toLowerCase()).sort();
-    const additionalList = additional.map(key => key.toLowerCase()).sort();
-    const baseList       = main.map(key => key.toLowerCase()).sort();
-
-      // find Coincidences between links and stack lists
-    const CoincidenceLibsNames       = libsLinksKeys.filter(lib => libsList.includes(lib))
-    const CoincidenceAdditionalNames = additionalLinksKeys.filter(elem => additionalList.includes(elem))
-    const CoincidenceBaseNames       = baseLinksKeys.filter(elem => baseList.includes(elem))
-
-      // lists of links according to list of stack 
-    CoincidenceLinksInProject           = CoincidenceLibsNames.map(key => stackLinks.libsLinks[key])
-    CoincidenceAdditionalLinksInProject = CoincidenceAdditionalNames.map(key => stackLinks.additionalLinks[key])
-    CoincidenceBaseLinksInProject       = CoincidenceBaseNames.map(key => stackLinks.baseLinks[key])
-
-}
-
+import {getProjectStackLinks} from "./getProjectStackLinks.js"
 
 // HTML-Template for Portfolio
- function portfolioTemplate({
+export function makeProjectTemplate({
     id,
     type,
     img,
@@ -47,7 +16,7 @@ function generateStackLinks(libs, additional, main) {
     originalRepository // optional
 }) {
 
-    generateStackLinks(stack.libs, stack.additional, stack.main);
+    const {CoincidenceLinksInProject, CoincidenceAdditionalLinksInProject, CoincidenceBaseLinksInProject} = getProjectStackLinks(stack.libs, stack.additional, stack.main);
 
     const mainPage = `
         <div class="swiper-slide project" data-slide-category="${type}" data-hash="project${id}">
@@ -97,11 +66,10 @@ function generateStackLinks(libs, additional, main) {
                             ${subDescription}
                         </p>` : ''
                         }
-                        ${ (figma || youtube || originalRepository) ?
 
-                        `
-                        <p class="section__text project__description-text project__description-study">
-                        <b class="project__description-study-title">Учебные ресурсы</b>
+                        <ul class="section__text project__description-text project__description-study">     
+                        ${ (figma || youtube || originalRepository) ? `<li class="project__description-study-title">Учебные ресурсы</li>` : ''}
+
                         ${figma ?
                             `<a href="${figma}" target="_blank"
                             class="section__link link--active">Макет</a>
@@ -117,13 +85,9 @@ function generateStackLinks(libs, additional, main) {
                             class="section__link link--active">Github</a>
                             ` : ''
                         }
-                        </p>`
-                        
-                            : ''
-                        }
+                        </ul>
                     </div>
                     `
-
 
     const stackPage = `
                     <div class="project__info-container project__stack">
@@ -182,23 +146,8 @@ function generateStackLinks(libs, additional, main) {
                     </div>        
                 </div>`
 
-    const result = mainPage + infoPage + stackPage;  
-    return result
+    
+    return mainPage + infoPage + stackPage
 }
 
-const projectsList = document.querySelector('.projects')
-console.log(projectsList)
-
-// Generate Portfolio
-function generatePortfolio(projects) {
-
-    if(projectsList) {
-
-        projects.forEach(project => 
-            projectsList.insertAdjacentHTML("afterbegin", portfolioTemplate(project)))
-    }
-    
-} 
-
-generatePortfolio(projects)
 

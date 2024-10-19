@@ -13,13 +13,13 @@ export function fancyHtml(text) {
 
 export const fancyText = {
   successSend   : `
-   <div class="modal-message">
+   <div class="modal-message short-modal-message">
   <p class="modal-message__text">Данные успешно отправлены</>
   </div>
   `,
-  requiredFields: `<p class="modal-text">Заполните обязательные поля</p>`,
+  requiredFields: `<p class="modal-text short-modal-message">Заполните обязательные поля</p>`,
   errorSend     : `
-  <div class="modal-message">
+  <div class="modal-message short-modal-message">
   <p class="modal-message__text">Возникла ошибка</>
   </div>
   `
