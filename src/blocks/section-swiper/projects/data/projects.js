@@ -92,6 +92,24 @@ export const projects = [
     {
         id            : 6,
         type          : 'own',
+        img           : '../img/test-amocrm.png',
+        title         : 'Создание сущностей amoCRM',
+        description   : `Тестовое задание (описание в readme)`,
+        subDescription: 'Создание сущностей происходит в аккаунте amoCRM посредством отправки POST-запроса с токеном',
+        stack         : {
+            main      : ['Vue', 'Pinia', 'CSS'],
+            libs      : [],
+            additional: ['Axios']
+        },
+        linkGithub: 'https://github.com/ATaimasov/_.test-amoCRM',
+        linkServer: 'https://test-amocrm.xn--80aag0apnud.xn--p1ai/',
+        figma     : '',
+        youtube   : '',
+        originalRepository: ''
+    },
+    {
+        id            : 7,
+        type          : 'own',
         img           : '../img/todo-app.png',
         title         : 'ToDo-List',
         description   : `Задачи/заметки можно добавлять, редактировать, удалять, отмечать выполненными.`,
