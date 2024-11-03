@@ -16,8 +16,8 @@
         fontello   : 'https://fontello.com/',
         jquery     : 'https://jquery.com/',
         slickslider: 'https://kenwheeler.github.io/slick/',
-        tailwindcss: 'https://tailwindcss.com/'
-
+        tailwindcss: 'https://tailwindcss.com/',
+        vueuse     : 'https://vueuse.org/',
     },
     additionalLinks: {
         phpmailer: 'https://github.com/PHPMailer/PHPMailer',

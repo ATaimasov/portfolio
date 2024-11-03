@@ -125,7 +125,24 @@ export const projects = [
         youtube   : '',
         originalRepository: ''
     },
-
+    {
+        id            : 8,
+        type          : 'own',
+        img           : '../img/test-devicesAndNodes.png',
+        title         : 'Устройства и узлы',
+        description   : `Тестовое задание`,
+        subDescription: 'Можно добавлять, удалять и редактировать узлы. Они сохраняются в localStorage',
+        stack         : {
+            main      : ['Vue', 'Pinia', 'CSS'],
+            libs      : ['VueUse'],
+            additional: ['uid']
+        },
+        linkGithub: 'https://github.com/ATaimasov/_.test-DevicesAndNodes',
+        linkServer: 'https://devices-and-nodes.xn--80aag0apnud.xn--p1ai/',
+        figma     : '',
+        youtube   : '',
+        originalRepository: ''
+    },
 ]
 
 // mutating array to make fresh projects have ascending order

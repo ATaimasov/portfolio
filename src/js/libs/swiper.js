@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} from 'swiper/modules';
 
- export const swiperBeforeIt = new Swiper('.swiper-before-it', {
+ export const swiperBeforeIt = new Swiper('.swiper-experience-before', {
     modules: [Pagination, EffectCube, Mousewheel, Keyboard],
     grabCursor: true,
     effect: "cube",
@@ -12,7 +12,7 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
     sensitivity: 1,
   },
   pagination: {
-    el: ".swiper-pagination__before-it",
+    el: ".swiper-pagination__experience-before",
     clickable: true,
   },
   keyboard: {
@@ -22,7 +22,7 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
   
   });
 
-  export const swiperAfterIt = new Swiper('.swiper-after-it', {
+  export const swiperAfterIt = new Swiper('.swiper-experience-it', {
     modules: [Pagination, EffectCube, Mousewheel, Keyboard],
     grabCursor: true,
     effect: "cube",
@@ -33,7 +33,7 @@ import { Pagination, EffectCube, Mousewheel, EffectFade, Autoplay, Keyboard} fro
     sensitivity: 1,
   },
   pagination: {
-    el: ".swiper-pagination__after-it",
+    el: ".swiper-pagination__experience-it",
     clickable: true,
   },
   keyboard: {
