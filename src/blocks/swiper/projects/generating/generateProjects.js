@@ -7,7 +7,6 @@ const projectsList = document.querySelector('.projects')
 function generatePortfolio(projects) {
 
     if(projectsList) {
-
         projects.forEach(project => 
             projectsList.insertAdjacentHTML("afterbegin", makeProjectTemplate(project)))
     }

@@ -1,4 +1,4 @@
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css'; 
@@ -17,7 +17,8 @@ export const scss = () => {
         ))
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
         .pipe(sass( {
-            outputStyle: 'expanded'
+            outputStyle: 'expanded',
+            silenceDeprecations: ['legacy-js-api'],
         }))
 
         .pipe(

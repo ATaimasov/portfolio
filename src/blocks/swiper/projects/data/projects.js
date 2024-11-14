@@ -79,8 +79,8 @@ export const projects = [
         description   : `Просмотр погоды по геоданным на 7 дней. Можно добавить локацию в избранное.`,
         subDescription: 'Было реализовано много своего: другие API-запросы, встроен Swiper, etc',
         stack         : {
-            main      : ['Vue', 'Vue Router'],
-            libs      : ['TailwindCSS', 'Swiper'],
+            main      : ['Vue', 'TailwindCSS'],
+            libs      : ['Vue Router', 'Swiper'],
             additional: ['Axios', 'Vite']
         },
         linkGithub: 'https://github.com/ATaimasov/_edu-weather-app',
@@ -97,8 +97,8 @@ export const projects = [
         description   : `Тестовое задание (описание в readme)`,
         subDescription: 'Создание сущностей происходит в аккаунте amoCRM посредством отправки POST-запроса с токеном',
         stack         : {
-            main      : ['Vue', 'Pinia', 'CSS'],
-            libs      : [],
+            main      : ['Vue', 'CSS'],
+            libs      : ['Pinia'],
             additional: ['Axios']
         },
         linkGithub: 'https://github.com/ATaimasov/_.test-amoCRM',
@@ -115,8 +115,8 @@ export const projects = [
         description   : `Задачи/заметки можно добавлять, редактировать, удалять, отмечать выполненными.`,
         subDescription: 'Они сохраняются в localStorage',
         stack         : {
-            main      : ['Vue', 'Pinia', 'CSS'],
-            libs      : [],
+            main      : ['Vue', 'CSS'],
+            libs      : ['Pinia'],
             additional: ['uid']
         },
         linkGithub: 'https://github.com/ATaimasov/ToDo',
@@ -133,12 +133,30 @@ export const projects = [
         description   : `Тестовое задание`,
         subDescription: 'Можно добавлять, удалять и редактировать узлы. Они сохраняются в localStorage',
         stack         : {
-            main      : ['Vue', 'Pinia', 'CSS'],
-            libs      : ['VueUse'],
+            main      : ['Vue', 'CSS'],
+            libs      : ['VueUse', 'Pinia'],
             additional: ['uid']
         },
         linkGithub: 'https://github.com/ATaimasov/_.test-DevicesAndNodes',
         linkServer: 'https://devices-and-nodes.xn--80aag0apnud.xn--p1ai/',
+        figma     : '',
+        youtube   : '',
+        originalRepository: ''
+    },
+    {
+        id            : 9,
+        type          : 'own',
+        img           : '../img/test-form.png',
+        title         : 'Форма с превью',
+        description   : `Тестовое задание. Форма, где можно оставить данные о себе и своих детях`,
+        subDescription: 'Реализация по макету и требованиям (описание в readme)',
+        stack         : {
+            main      : ['Vue', 'SCSS'],
+            libs      : ['Pinia', 'Vue Router'],
+            additional: ['uid', 'BEM', 'vite']
+        },
+        linkGithub: 'https://github.com/ATaimasov/_.test-Form',
+        linkServer: 'https://test-form.xn--80aag0apnud.xn--p1ai/form',
         figma     : '',
         youtube   : '',
         originalRepository: ''
