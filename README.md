@@ -30,7 +30,7 @@
 
 #### Основа:
 - HTML;
-- CSS + SCSS;
+- SCSS;
 - JavaScript;
 
 #### Библиотеки:
