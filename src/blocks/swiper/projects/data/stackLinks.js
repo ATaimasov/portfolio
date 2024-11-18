@@ -1,12 +1,12 @@
-  // don't use capital letters
+    // don't use capital letters
   export const stackLinks = {
     baseLinks: {
-        js  : 'https://www.javascript.com/',
-        html: 'https://developer.mozilla.org/ru/docs/Web/HTML',
-        css : 'https://developer.mozilla.org/ru/docs/Web/CSS',
-        scss: 'https://sass-lang.com/',
-        vue : 'https://vuejs.org/',
-        tailwindcss : 'https://tailwindcss.com/',
+        js         : 'https://www.javascript.com/',
+        html       : 'https://developer.mozilla.org/ru/docs/Web/HTML',
+        css        : 'https://developer.mozilla.org/ru/docs/Web/CSS',
+        scss       : 'https://sass-lang.com/',
+        vue        : 'https://vuejs.org/',
+        tailwindcss: 'https://tailwindcss.com/',
     },
     libsLinks: {
         swiper      : 'https://swiperjs.com/',
@@ -14,6 +14,7 @@
         fontello    : 'https://fontello.com/',
         jquery      : 'https://jquery.com/',
         slickslider : 'https://kenwheeler.github.io/slick/',
+        jsviews     : 'https://github.com/BorisMoore/jsviews',
         vueuse      : 'https://vueuse.org/',
         pinia       : 'https://pinia.vuejs.org/',
         "vue router": 'https://next.router.vuejs.org/',

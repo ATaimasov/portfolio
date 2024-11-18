@@ -161,6 +161,24 @@ export const projects = [
         youtube   : '',
         originalRepository: ''
     },
+    {
+        id            : 10,
+        type          : 'own',
+        img           : '../img/test-jquery-spa.png',
+        title         : 'jQuery SPA',
+        description   : `Тестовое задание на верстку`,
+        subDescription: 'Дополнительно реализовал SPA с использованием плагина jQ и использовал миксины и функции SCSS для адаптива',
+        stack         : {
+            main      : ['JS', 'SCSS'],
+            libs      : ['jQuery', 'JsViews'],
+            additional: ['BEM', 'gulp']
+        },
+        linkGithub: 'https://github.com/ATaimasov/_.test-jquery-spa',
+        linkServer: 'https://test-jquery-spa.таймасов.рф/about-us',
+        figma     : '',
+        youtube   : '',
+        originalRepository: ''
+    },
 ]
 
 // mutating array to make fresh projects have ascending order
